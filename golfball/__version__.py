@@ -1,3 +1,3 @@
 """File used to obtain version as a string variable."""
 
-__version__ = '3.0.0'
+__version__ = '1.0.0'

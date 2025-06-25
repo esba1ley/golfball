@@ -6,7 +6,7 @@ build-backend = "setuptools.build_meta"
 name = "golfball"
 description = "A nonlinear golfball sim with drag crisis and magnus effect."
 readme = "README.rst"
-version = "3.0.0"
+version = "1.0.0"
 requires-python = ">= 3.9"
 dependencies = [
     'ruamel.yaml',

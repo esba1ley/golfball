@@ -4,26 +4,34 @@ golfball package
 Submodules
 ----------
 
+golfball.analysis module
+------------------------
+
+.. automodule:: golfball.analysis
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
 golfball.sim module
 -------------------
 
 .. automodule:: golfball.sim
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:
 
 golfball.stdAtm76 module
 ------------------------
 
 .. automodule:: golfball.stdAtm76
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:
 
 Module contents
 ---------------
 
 .. automodule:: golfball
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:

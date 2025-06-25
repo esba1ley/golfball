@@ -74,8 +74,9 @@ reports/ruff/ruff_report.txt:
 	ruff check golfball | tee reports/ruff/ruff_report.txt
 
 
-golfball.rst: golfball/*.py
-modules.rst: golfball/*.py
+.PHONY: apidoc
+golfball.rst: apidoc
+modules.rst: apidoc
 apidoc: ## generate Sphinx API documentation
 	@echo ----------------- Generating Sphinx API documentation -----------------
 	sphinx-apidoc -o docs/ golfball
@@ -86,12 +87,6 @@ docs:  golfball.rst modules.rst ## generate Sphinx HTML documentation, including
 	$(MAKE) -C docs clean
 	$(MAKE) -C docs html
 	$(BROWSER) docs/_build/html/index.html
-
-.PHONY: publish-docs
-publish-docs: docs  ## Publish Sphinx HTML docs to GitHub Pages
-	@echo ------------- Publishing docs to GitHub Pages -------------------------
-	ghp-import -n -p -f docs/_build/html -b gh-pages
-	@echo "Docs published at https://esba1ley.github.io/golfball/"
 
 reports/docs: docs
 	-cp -r docs/_build/html reports/docs

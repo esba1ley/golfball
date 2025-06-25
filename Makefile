@@ -3,9 +3,6 @@
 .APP = golfball
 .TAG = $(shell git branch | sed -n -e 's/^\* \(.*\)/\1/p')
 
-ifeq ($(.TAG),master)
-    .TAG = latest
-endif
 
 # User can specify a parallel zip tool (like pigz) for the tarball target.
 ifeq ($(ZIP_CMD),)
@@ -47,19 +44,19 @@ export PRINT_HELP_PYSCRIPT
 .PHONY: help
 help:  ## Display list of intended targets for user (DEFAULT)
 	@echo "-------------------- Makefile Target List --------------------------"
-	@echo " Application for $(.APP):$(.TAG)"
-	@echo " Docker Registry: $(.REGISTRY)"
+	@echo " Package: $(.APP)"
+	@echo " Git branch: $(.TAG)"
 	@echo "--------------------------------------------------------------------"
 	@python -c "$$PRINT_HELP_PYSCRIPT" < $(MAKEFILE_LIST)
 	@echo "--------------------------------------------------------------------"
 
 .PHONY: reports
-reports:  reports/pylint/pylint_report.txt reports/coverage reports/pytest ## check style, coverage, and run tests both locally and in app image
+reports:  reports/ruff/ruff_report.txt reports/coverage reports/pytest reports/docs ## check style, coverage, and run tests both locally and in app image
 	$(BROWSER) reports/index.html
 
 .PHONY: tests
-.coverage:
-reports/pytest/index.html:
+.coverage: tests
+reports/pytest: tests
 tests:  ## run tests quickly with the default Python
 	@echo -------------------- Running test suite -------------------------------
 	pytest -v --cov=golfball --html=reports/pytest/index.html tests/
@@ -69,12 +66,12 @@ reports/coverage: .coverage
 	coverage report -m
 	coverage html -d reports/coverage/
 
-.PHONY: pylint
-reports/pylint/pylint_report.txt: 
-pylint:  ## check gball sim code style with pylint
+.PHONY: ruff
+ruff: reports/ruff/ruff_report.txt ## check gball sim code style with pylint
+reports/ruff/ruff_report.txt: 
 	@echo ------------------- Checking code style -------------------------------
-	mkdir -p reports/pylint
-	-pylint -d W0511 golfball | tee reports/pylint/pylint_report.txt
+	mkdir -p reports/ruff
+	ruff check golfball | tee reports/ruff/ruff_report.txt
 
 
 golfball.rst: golfball/*.py
@@ -88,8 +85,16 @@ docs:  golfball.rst modules.rst ## generate Sphinx HTML documentation, including
 	@echo -------------- Buliding Sphinx HTML documentation ---------------------
 	$(MAKE) -C docs clean
 	$(MAKE) -C docs html
-	-cp -r docs/_build/html reports/docs
 	$(BROWSER) docs/_build/html/index.html
+
+.PHONY: publish-docs
+publish-docs: docs  ## Publish Sphinx HTML docs to GitHub Pages
+	@echo ------------- Publishing docs to GitHub Pages -------------------------
+	ghp-import -n -p -f docs/_build/html -b gh-pages
+	@echo "Docs published at https://esba1ley.github.io/golfball/"
+
+reports/docs: docs
+	-cp -r docs/_build/html reports/docs
 
 .PHONY: install
 install:  ## install the package to the active Python's site-packages
@@ -108,22 +113,14 @@ uninstall:  ## uninstall the packge from the current environment
 
 
 # Create a tarball of the test reports
-$(.APP)-$(.TAG).tar:
+$(.APP)-$(.TAG).tar: reports/coverage reports/pytest reports/docs reports/ruff/ruff_report.txt
 	@echo ------------- Archiving test reports to $(.APP)-$(.TAG).tar  ----------
 	tar -cvf $(.APP)-$(.TAG).tar reports
 
-archive: ## Create g-zipped tarball of image
+reports-archive: ## Create g-zipped tarball of test rports
 $(.APP)-$(.TAG).tar.gz:  $(.APP)-$(.TAG).tar  
 	@echo --------- Compressing test reports to $(.APP)-$(.TAG).tar.gz  ---------
 	${ZIP_CMD} $(.APP)-$(.TAG).tar
-
-pull-docker-app:  ## pull branch image from registry
-	@echo ----------------- Pulling docker image from registry  -----------------
-	docker pull $(.REGISTRY)/$(.APP):$(.TAG)
-
-push-docker-app:  ## push branch image to registry
-	@echo ----------------- Pushing docker image from registry  -----------------
-	docker push $(.REGISTRY)/$(.APP):$(.TAG)
 
 clean: clean-build clean-pyc clean-tests clean-archives  ## remove all artifacts
 
@@ -147,7 +144,7 @@ clean-tests:  ## remove test reports, caches, and coverage artifacts
 	-rm -f .coverage
 	-rm -fr reports/container
 	-rm -fr reports/coverage
-	-rm -fr reports/pylint
+	-rm -fr reports/ruff
 	-rm -fr reports/pytest
 	-rm -fr reports/docs
 	-rm -fr .pytest_cache

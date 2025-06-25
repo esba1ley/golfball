@@ -1,0 +1,51 @@
+[build-system]
+requires = ["setuptools >= 61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "golfball"
+description = "A nonlinear golfball sim with drag crisis and magnus effect."
+readme = "README.rst"
+version = "3.0.0"
+requires-python = ">= 3.9"
+dependencies = [
+    'ruamel.yaml',
+    'tables',
+    'numpy',
+    'scipy',
+    'pandas',
+]
+authors = [
+    {name = "Erik S. Bailey", email="esbailey@me.com"}
+]
+maintainers = [
+    {name = "Erik S. Bailey", email="esbailey@me.com"}
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Environment :: Console",
+    "Intended Audience :: Education",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: Apache Software License",
+    "Natural Language :: English",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python",
+    "Topic :: Scientific/Engineering"
+]
+
+[project.scripts]
+gball = "golfball:main"
+
+[project.urls]
+Repository = "https://github.com/esba1ley/golfball.git"
+Issues = "https://github.com/esba1ley/golfball/issues"
+Changelog = "https://github.com/esba1ley/golfball/blob/main/CHANGELOG.rst"
+
+[tool.setuptools.packages.find]
+where = ["."]
+
+[tool.setuptools.package-data]
+golfball = ["cd_table.h5"]
+
+[tool.esbonio.sphinx]
+buildCommand = ["sphinx-build", "-M", "dirhtml", "docs", ".docs/_build"]

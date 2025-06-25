@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>golfball package &#8212; golfball 3.0.0 documentation</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/classic.css?v=67a6116b" />
+    <link rel="stylesheet" type="text/css" href="_static/pydoctheme.css?v=5ff89526" />
+    <link id="pygments_dark_css" media="(prefers-color-scheme: dark)" rel="stylesheet" type="text/css" href="_static/pygments_dark.css?v=5349f25f" />
+    
+    <script src="_static/documentation_options.js?v=acc74ff5"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Changelog" href="changelog.html" />
+    <link rel="prev" title="golfball" href="modules.html" /><link rel="stylesheet" href="_static/pydoctheme_dark.css" media="(prefers-color-scheme: dark)" id="pydoctheme_dark_css">
+    <link rel="shortcut icon" type="image/png" href="_static/py.svg">
+            <script type="text/javascript" src="_static/copybutton.js"></script>
+            <script type="text/javascript" src="_static/menu.js"></script>
+            <script type="text/javascript" src="_static/search-focus.js"></script>
+            <script type="text/javascript" src="_static/themetoggle.js"></script> 
+  </head>
+<body>
+<div class="mobile-nav">
+    <input type="checkbox" id="menuToggler" class="toggler__input" aria-controls="navigation"
+           aria-pressed="false" aria-expanded="false" role="button" aria-label="Menu">
+    <nav class="nav-content" role="navigation">
+        <label for="menuToggler" class="toggler__label">
+            <span></span>
+        </label>
+        <span class="nav-items-wrapper">
+            <a href="https://www.python.org/" class="nav-logo">
+                <img src="_static/py.svg" alt="Python logo">
+            </a>
+            <span class="version_switcher_placeholder"></span>
+            <form role="search" class="search" action="search.html" method="get">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" class="search-icon">
+                    <path fill-rule="nonzero" fill="currentColor" d="M15.5 14h-.79l-.28-.27a6.5 6.5 0 001.48-5.34c-.47-2.78-2.79-5-5.59-5.34a6.505 6.505 0 00-7.27 7.27c.34 2.8 2.56 5.12 5.34 5.59a6.5 6.5 0 005.34-1.48l.27.28v.79l4.25 4.25c.41.41 1.08.41 1.49 0 .41-.41.41-1.08 0-1.49L15.5 14zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path>
+                </svg>
+                <input placeholder="Quick search" aria-label="Quick search" type="search" name="q">
+                <input type="submit" value="Go">
+            </form>
+        </span>
+    </nav>
+    <div class="menu-wrapper">
+        <nav class="menu" role="navigation" aria-label="main navigation">
+            <div class="language_switcher_placeholder"></div>
+            
+<label class="theme-selector-label">
+    Theme
+    <select class="theme-selector" oninput="activateTheme(this.value)">
+        <option value="auto" selected>Auto</option>
+        <option value="light">Light</option>
+        <option value="dark">Dark</option>
+    </select>
+</label>
+  <div>
+    <h3><a href="index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">golfball package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-golfball.sim">golfball.sim module</a><ul>
+<li><a class="reference internal" href="#golfball.sim.Sim"><code class="docutils literal notranslate"><span class="pre">Sim</span></code></a><ul>
+<li><a class="reference internal" href="#golfball.sim.Sim.read_inputs"><code class="docutils literal notranslate"><span class="pre">Sim.read_inputs()</span></code></a></li>
+<li><a class="reference internal" href="#golfball.sim.Sim.run"><code class="docutils literal notranslate"><span class="pre">Sim.run()</span></code></a></li>
+<li><a class="reference internal" href="#golfball.sim.Sim.write_default_inputs"><code class="docutils literal notranslate"><span class="pre">Sim.write_default_inputs()</span></code></a></li>
+<li><a class="reference internal" href="#golfball.sim.Sim.write_outputs"><code class="docutils literal notranslate"><span class="pre">Sim.write_outputs()</span></code></a></li>
+<li><a class="reference internal" href="#golfball.sim.Sim.write_qoi"><code class="docutils literal notranslate"><span class="pre">Sim.write_qoi()</span></code></a></li>
+<li><a class="reference internal" href="#golfball.sim.Sim.write_trajectories"><code class="docutils literal notranslate"><span class="pre">Sim.write_trajectories()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#golfball.sim.calc_drag_coeff"><code class="docutils literal notranslate"><span class="pre">calc_drag_coeff()</span></code></a></li>
+<li><a class="reference internal" href="#golfball.sim.get_args"><code class="docutils literal notranslate"><span class="pre">get_args()</span></code></a></li>
+<li><a class="reference internal" href="#golfball.sim.load_gball_h5"><code class="docutils literal notranslate"><span class="pre">load_gball_h5()</span></code></a></li>
+<li><a class="reference internal" href="#golfball.sim.main"><code class="docutils literal notranslate"><span class="pre">main()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-golfball.stdAtm76">golfball.stdAtm76 module</a><ul>
+<li><a class="reference internal" href="#golfball.stdAtm76.getDynViscosity"><code class="docutils literal notranslate"><span class="pre">getDynViscosity()</span></code></a></li>
+<li><a class="reference internal" href="#golfball.stdAtm76.getGeopotential"><code class="docutils literal notranslate"><span class="pre">getGeopotential()</span></code></a></li>
+<li><a class="reference internal" href="#golfball.stdAtm76.getReynoldsNumber"><code class="docutils literal notranslate"><span class="pre">getReynoldsNumber()</span></code></a></li>
+<li><a class="reference internal" href="#golfball.stdAtm76.getSpeedOfSound"><code class="docutils literal notranslate"><span class="pre">getSpeedOfSound()</span></code></a></li>
+<li><a class="reference internal" href="#golfball.stdAtm76.getStandardDensity"><code class="docutils literal notranslate"><span class="pre">getStandardDensity()</span></code></a></li>
+<li><a class="reference internal" href="#golfball.stdAtm76.getStandardPressure"><code class="docutils literal notranslate"><span class="pre">getStandardPressure()</span></code></a></li>
+<li><a class="reference internal" href="#golfball.stdAtm76.getStandardTemperature"><code class="docutils literal notranslate"><span class="pre">getStandardTemperature()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-golfball">Module contents</a><ul>
+<li><a class="reference internal" href="#golfball.Sim"><code class="docutils literal notranslate"><span class="pre">Sim</span></code></a><ul>
+<li><a class="reference internal" href="#golfball.Sim.read_inputs"><code class="docutils literal notranslate"><span class="pre">Sim.read_inputs()</span></code></a></li>
+<li><a class="reference internal" href="#golfball.Sim.run"><code class="docutils literal notranslate"><span class="pre">Sim.run()</span></code></a></li>
+<li><a class="reference internal" href="#golfball.Sim.write_default_inputs"><code class="docutils literal notranslate"><span class="pre">Sim.write_default_inputs()</span></code></a></li>
+<li><a class="reference internal" href="#golfball.Sim.write_outputs"><code class="docutils literal notranslate"><span class="pre">Sim.write_outputs()</span></code></a></li>
+<li><a class="reference internal" href="#golfball.Sim.write_qoi"><code class="docutils literal notranslate"><span class="pre">Sim.write_qoi()</span></code></a></li>
+<li><a class="reference internal" href="#golfball.Sim.write_trajectories"><code class="docutils literal notranslate"><span class="pre">Sim.write_trajectories()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#golfball.load_gball_h5"><code class="docutils literal notranslate"><span class="pre">load_gball_h5()</span></code></a></li>
+<li><a class="reference internal" href="#golfball.main"><code class="docutils literal notranslate"><span class="pre">main()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="modules.html"
+                          title="previous chapter">golfball</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="changelog.html"
+                          title="next chapter">Changelog</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/golfball.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </nav>
+    </div>
+</div>
+  
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="changelog.html" title="Changelog"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="modules.html" title="golfball"
+             accesskey="P">previous</a> |</li>
+          <li><img src="_static/py.svg" alt="Python logo" style="vertical-align: middle; margin-top: -1px"></li>
+          <li><a href="https://www.python.org/">Python</a> &#187;</li>
+          <li class="switchers">
+            <div class="language_switcher_placeholder"></div>
+            <div class="version_switcher_placeholder"></div>
+          </li>
+          <li>
+              
+              <a href="index.html">golfball 3.0.0 documentation</a> &#187;
+              
+          </li>
+          <li class="nav-item nav-item-1"><a href="modules.html" accesskey="U">golfball</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">golfball package</a></li>
+                <li class="right">
+                    
+
+    <div class="inline-search" role="search">
+        <form class="inline-search" action="search.html" method="get">
+          <input placeholder="Quick search" aria-label="Quick search" type="search" name="q" id="search-box">
+          <input type="submit" value="Go">
+        </form>
+    </div>
+                     |
+                </li>
+            <li class="right">
+<label class="theme-selector-label">
+    Theme
+    <select class="theme-selector" oninput="activateTheme(this.value)">
+        <option value="auto" selected>Auto</option>
+        <option value="light">Light</option>
+        <option value="dark">Dark</option>
+    </select>
+</label> |</li>
+            
+      </ul>
+    </div>    
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="golfball-package">
+<h1>golfball package<a class="headerlink" href="#golfball-package" title="Link to this heading">¶</a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading">¶</a></h2>
+</section>
+<section id="module-golfball.sim">
+<span id="golfball-sim-module"></span><h2>golfball.sim module<a class="headerlink" href="#module-golfball.sim" title="Link to this heading">¶</a></h2>
+<p>3D Golf Ball demo simulation with varying Drag Crisis and Magus Effect.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="golfball.sim.Sim">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">golfball.sim.</span></span><span class="sig-name descname"><span class="pre">Sim</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">args</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/golfball/sim.html#Sim"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#golfball.sim.Sim" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>The primary simulation object.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="golfball.sim.Sim.read_inputs">
+<span class="sig-name descname"><span class="pre">read_inputs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/golfball/sim.html#Sim.read_inputs"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#golfball.sim.Sim.read_inputs" title="Link to this definition">¶</a></dt>
+<dd><p>Read inputs YAML file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>filename</strong> (<em>type</em>) – Input YAML file.</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>FileNotFoundError :</strong> – Raised if the specified file is not present.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="golfball.sim.Sim.run">
+<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/golfball/sim.html#Sim.run"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#golfball.sim.Sim.run" title="Link to this definition">¶</a></dt>
+<dd><p>Run the simulation.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="golfball.sim.Sim.write_default_inputs">
+<span class="sig-name descname"><span class="pre">write_default_inputs</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/golfball/sim.html#Sim.write_default_inputs"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#golfball.sim.Sim.write_default_inputs" title="Link to this definition">¶</a></dt>
+<dd><p>Write default parameters to the default input file.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="golfball.sim.Sim.write_outputs">
+<span class="sig-name descname"><span class="pre">write_outputs</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/golfball/sim.html#Sim.write_outputs"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#golfball.sim.Sim.write_outputs" title="Link to this definition">¶</a></dt>
+<dd><p>Write quantities of interest to YAML, and optional traj to HDF5.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="golfball.sim.Sim.write_qoi">
+<span class="sig-name descname"><span class="pre">write_qoi</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/golfball/sim.html#Sim.write_qoi"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#golfball.sim.Sim.write_qoi" title="Link to this definition">¶</a></dt>
+<dd><p>Write Quantities of Interest to YAML.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>qoi</strong> (<em>dict</em>) – Quantities of Interest to write out.</p></li>
+<li><p><strong>filename</strong> (<em>str</em>) – name of YAML output file for QoI</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="golfball.sim.Sim.write_trajectories">
+<span class="sig-name descname"><span class="pre">write_trajectories</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/golfball/sim.html#Sim.write_trajectories"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#golfball.sim.Sim.write_trajectories" title="Link to this definition">¶</a></dt>
+<dd><p>Save full trajectory to traj_df.h5 HDF5 file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>filename</strong> (<em>str</em>) – Name of the output file for the trajectory HDF5.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="golfball.sim.calc_drag_coeff">
+<span class="sig-prename descclassname"><span class="pre">golfball.sim.</span></span><span class="sig-name descname"><span class="pre">calc_drag_coeff</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">height</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vel_mag</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">l_ref</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rho</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dimple_size</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/golfball/sim.html#calc_drag_coeff"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#golfball.sim.calc_drag_coeff" title="Link to this definition">¶</a></dt>
+<dd><p>Calcualte the Coefficient of Drag (Cd).</p>
+<p>Calculate Cd as a function of height, velocity magnitude,
+reference length, and density.  Note:  this assumes a
+Temperature profile from the US Standard ATM, and uses CD</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="golfball.sim.get_args">
+<span class="sig-prename descclassname"><span class="pre">golfball.sim.</span></span><span class="sig-name descname"><span class="pre">get_args</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">arg_list</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/golfball/sim.html#get_args"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#golfball.sim.get_args" title="Link to this definition">¶</a></dt>
+<dd><p>Make CLI argument parser and parse arguments.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="golfball.sim.load_gball_h5">
+<span class="sig-prename descclassname"><span class="pre">golfball.sim.</span></span><span class="sig-name descname"><span class="pre">load_gball_h5</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">h5_file</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/golfball/sim.html#load_gball_h5"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#golfball.sim.load_gball_h5" title="Link to this definition">¶</a></dt>
+<dd><p>Load the saved Pandas DataFrame from the specified HDF5 file.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="golfball.sim.main">
+<span class="sig-prename descclassname"><span class="pre">golfball.sim.</span></span><span class="sig-name descname"><span class="pre">main</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">arg_list</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/golfball/sim.html#main"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#golfball.sim.main" title="Link to this definition">¶</a></dt>
+<dd><p>Read in the inputs, run the sim, write out the outputs.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>arg_list</strong> (<em>list</em><em> of </em><em>str</em><em>, </em><em>optional</em>) – List of individual commandline arguments to invoke main with. If
+omitted, the actual commandline arguments will be used.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-golfball.stdAtm76">
+<span id="golfball-stdatm76-module"></span><h2>golfball.stdAtm76 module<a class="headerlink" href="#module-golfball.stdAtm76" title="Link to this heading">¶</a></h2>
+<p>Module for querying the 1976 US Standard Atmosphere.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="golfball.stdAtm76.getDynViscosity">
+<span class="sig-prename descclassname"><span class="pre">golfball.stdAtm76.</span></span><span class="sig-name descname"><span class="pre">getDynViscosity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">T</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/golfball/stdAtm76.html#getDynViscosity"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#golfball.stdAtm76.getDynViscosity" title="Link to this definition">¶</a></dt>
+<dd><p>Return the dynamic viscosity in Pascal-Seconds.</p>
+<ul class="simple">
+<li><p>of a air (80% N2 20% 02)</p></li>
+<li><p>at a specified temperature in Kelvin.</p></li>
+</ul>
+<section id="inputs">
+<h3>Inputs<a class="headerlink" href="#inputs" title="Link to this heading">¶</a></h3>
+<dl class="simple">
+<dt>T: int or float (in degrees K)</dt><dd><p>specified temperature</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>Dynamnic viscosity</strong></p>
+</dd>
+<dt class="field-even">rtype<span class="colon">:</span></dt>
+<dd class="field-even"><p>float (in Pa*s)</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="golfball.stdAtm76.getGeopotential">
+<span class="sig-prename descclassname"><span class="pre">golfball.stdAtm76.</span></span><span class="sig-name descname"><span class="pre">getGeopotential</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">altitude</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">units</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'km'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">earth_radius</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">6356.766</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/golfball/stdAtm76.html#getGeopotential"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#golfball.stdAtm76.getGeopotential" title="Link to this definition">¶</a></dt>
+<dd><p>Return the geopotential altitude in the units specified.</p>
+<p>Current units supported are ‘m’ and ‘km’</p>
+<p>geopot_height = earth_radius * altitude / (earth_radius + altitude)</p>
+<p>computations done in km.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="golfball.stdAtm76.getReynoldsNumber">
+<span class="sig-prename descclassname"><span class="pre">golfball.stdAtm76.</span></span><span class="sig-name descname"><span class="pre">getReynoldsNumber</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">velocity</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rho</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">l_ref</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">temp</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/golfball/stdAtm76.html#getReynoldsNumber"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#golfball.stdAtm76.getReynoldsNumber" title="Link to this definition">¶</a></dt>
+<dd><p>Compute the reynolds number (unitless).</p>
+<section id="id1">
+<h3>Inputs<a class="headerlink" href="#id1" title="Link to this heading">¶</a></h3>
+<p>velocity: fluid-relative velocity
+rho:      fluid density [kg/m^3]
+l_ref:    reference length [meters]
+temp:     fluid temperature [Kelvin]</p>
+</section>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="golfball.stdAtm76.getSpeedOfSound">
+<span class="sig-prename descclassname"><span class="pre">golfball.stdAtm76.</span></span><span class="sig-name descname"><span class="pre">getSpeedOfSound</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">altitude</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">units</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'km'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/golfball/stdAtm76.html#getSpeedOfSound"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#golfball.stdAtm76.getSpeedOfSound" title="Link to this definition">¶</a></dt>
+<dd><p>Calculate the speed of sound.</p>
+<p>Assumes units are ‘km’, unless otherwise specified in ‘m’.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="golfball.stdAtm76.getStandardDensity">
+<span class="sig-prename descclassname"><span class="pre">golfball.stdAtm76.</span></span><span class="sig-name descname"><span class="pre">getStandardDensity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">altitude</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">units</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'km'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/golfball/stdAtm76.html#getStandardDensity"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#golfball.stdAtm76.getStandardDensity" title="Link to this definition">¶</a></dt>
+<dd><p>Get the Standard Density given an altitude.</p>
+<p>Returns density as a function of altitude from the
+Standard Pressure and Standard Temperature using the
+Ideal Gas Law</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="golfball.stdAtm76.getStandardPressure">
+<span class="sig-prename descclassname"><span class="pre">golfball.stdAtm76.</span></span><span class="sig-name descname"><span class="pre">getStandardPressure</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">altitude</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">units</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'km'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/golfball/stdAtm76.html#getStandardPressure"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#golfball.stdAtm76.getStandardPressure" title="Link to this definition">¶</a></dt>
+<dd><p>Get the standard Pressure given an altitude.</p>
+<p>Below 51 km: Practical Meteorology by Roland Stull, pg 12
+Above 51 km: <a class="reference external" href="http://www.braeunig.us/space/atmmodel.htm">http://www.braeunig.us/space/atmmodel.htm</a></p>
+<p>Validation data:
+<a class="reference external" href="https://www.avs.org/AVS/files/c7/c7edaedb-95b2-438f-adfb-36de54f87b9e.pdf">https://www.avs.org/AVS/files/c7/c7edaedb-95b2-438f-adfb-36de54f87b9e.pdf</a></p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="golfball.stdAtm76.getStandardTemperature">
+<span class="sig-prename descclassname"><span class="pre">golfball.stdAtm76.</span></span><span class="sig-name descname"><span class="pre">getStandardTemperature</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">geopot_height</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/golfball/stdAtm76.html#getStandardTemperature"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#golfball.stdAtm76.getStandardTemperature" title="Link to this definition">¶</a></dt>
+<dd><p>Get the Standard Temparature from a given Geopotential Height.</p>
+<p>Standard atmospheric temperature, in kelvins (273.15 + Celsius)
+Below 51 km: Practical Meteorology by Roland Stull, pg 12
+Above 51 km: <a class="reference external" href="http://www.braeunig.us/space/atmmodel.htm">http://www.braeunig.us/space/atmmodel.htm</a></p>
+</dd></dl>
+
+</section>
+<section id="module-golfball">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-golfball" title="Link to this heading">¶</a></h2>
+<p>golfball is a Simple 2D Golf Ball Trajectory Simulation in Python.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="golfball.Sim">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">golfball.</span></span><span class="sig-name descname"><span class="pre">Sim</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">args</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/golfball/sim.html#Sim"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#golfball.Sim" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>The primary simulation object.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="golfball.Sim.read_inputs">
+<span class="sig-name descname"><span class="pre">read_inputs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/golfball/sim.html#Sim.read_inputs"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#golfball.Sim.read_inputs" title="Link to this definition">¶</a></dt>
+<dd><p>Read inputs YAML file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>filename</strong> (<em>type</em>) – Input YAML file.</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>FileNotFoundError :</strong> – Raised if the specified file is not present.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="golfball.Sim.run">
+<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/golfball/sim.html#Sim.run"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#golfball.Sim.run" title="Link to this definition">¶</a></dt>
+<dd><p>Run the simulation.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="golfball.Sim.write_default_inputs">
+<span class="sig-name descname"><span class="pre">write_default_inputs</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/golfball/sim.html#Sim.write_default_inputs"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#golfball.Sim.write_default_inputs" title="Link to this definition">¶</a></dt>
+<dd><p>Write default parameters to the default input file.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="golfball.Sim.write_outputs">
+<span class="sig-name descname"><span class="pre">write_outputs</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/golfball/sim.html#Sim.write_outputs"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#golfball.Sim.write_outputs" title="Link to this definition">¶</a></dt>
+<dd><p>Write quantities of interest to YAML, and optional traj to HDF5.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="golfball.Sim.write_qoi">
+<span class="sig-name descname"><span class="pre">write_qoi</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/golfball/sim.html#Sim.write_qoi"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#golfball.Sim.write_qoi" title="Link to this definition">¶</a></dt>
+<dd><p>Write Quantities of Interest to YAML.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>qoi</strong> (<em>dict</em>) – Quantities of Interest to write out.</p></li>
+<li><p><strong>filename</strong> (<em>str</em>) – name of YAML output file for QoI</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="golfball.Sim.write_trajectories">
+<span class="sig-name descname"><span class="pre">write_trajectories</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/golfball/sim.html#Sim.write_trajectories"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#golfball.Sim.write_trajectories" title="Link to this definition">¶</a></dt>
+<dd><p>Save full trajectory to traj_df.h5 HDF5 file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>filename</strong> (<em>str</em>) – Name of the output file for the trajectory HDF5.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="golfball.load_gball_h5">
+<span class="sig-prename descclassname"><span class="pre">golfball.</span></span><span class="sig-name descname"><span class="pre">load_gball_h5</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">h5_file</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/golfball/sim.html#load_gball_h5"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#golfball.load_gball_h5" title="Link to this definition">¶</a></dt>
+<dd><p>Load the saved Pandas DataFrame from the specified HDF5 file.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="golfball.main">
+<span class="sig-prename descclassname"><span class="pre">golfball.</span></span><span class="sig-name descname"><span class="pre">main</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">arg_list</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/golfball/sim.html#main"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#golfball.main" title="Link to this definition">¶</a></dt>
+<dd><p>Read in the inputs, run the sim, write out the outputs.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>arg_list</strong> (<em>list</em><em> of </em><em>str</em><em>, </em><em>optional</em>) – List of individual commandline arguments to invoke main with. If
+omitted, the actual commandline arguments will be used.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">golfball package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-golfball.sim">golfball.sim module</a><ul>
+<li><a class="reference internal" href="#golfball.sim.Sim"><code class="docutils literal notranslate"><span class="pre">Sim</span></code></a><ul>
+<li><a class="reference internal" href="#golfball.sim.Sim.read_inputs"><code class="docutils literal notranslate"><span class="pre">Sim.read_inputs()</span></code></a></li>
+<li><a class="reference internal" href="#golfball.sim.Sim.run"><code class="docutils literal notranslate"><span class="pre">Sim.run()</span></code></a></li>
+<li><a class="reference internal" href="#golfball.sim.Sim.write_default_inputs"><code class="docutils literal notranslate"><span class="pre">Sim.write_default_inputs()</span></code></a></li>
+<li><a class="reference internal" href="#golfball.sim.Sim.write_outputs"><code class="docutils literal notranslate"><span class="pre">Sim.write_outputs()</span></code></a></li>
+<li><a class="reference internal" href="#golfball.sim.Sim.write_qoi"><code class="docutils literal notranslate"><span class="pre">Sim.write_qoi()</span></code></a></li>
+<li><a class="reference internal" href="#golfball.sim.Sim.write_trajectories"><code class="docutils literal notranslate"><span class="pre">Sim.write_trajectories()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#golfball.sim.calc_drag_coeff"><code class="docutils literal notranslate"><span class="pre">calc_drag_coeff()</span></code></a></li>
+<li><a class="reference internal" href="#golfball.sim.get_args"><code class="docutils literal notranslate"><span class="pre">get_args()</span></code></a></li>
+<li><a class="reference internal" href="#golfball.sim.load_gball_h5"><code class="docutils literal notranslate"><span class="pre">load_gball_h5()</span></code></a></li>
+<li><a class="reference internal" href="#golfball.sim.main"><code class="docutils literal notranslate"><span class="pre">main()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-golfball.stdAtm76">golfball.stdAtm76 module</a><ul>
+<li><a class="reference internal" href="#golfball.stdAtm76.getDynViscosity"><code class="docutils literal notranslate"><span class="pre">getDynViscosity()</span></code></a></li>
+<li><a class="reference internal" href="#golfball.stdAtm76.getGeopotential"><code class="docutils literal notranslate"><span class="pre">getGeopotential()</span></code></a></li>
+<li><a class="reference internal" href="#golfball.stdAtm76.getReynoldsNumber"><code class="docutils literal notranslate"><span class="pre">getReynoldsNumber()</span></code></a></li>
+<li><a class="reference internal" href="#golfball.stdAtm76.getSpeedOfSound"><code class="docutils literal notranslate"><span class="pre">getSpeedOfSound()</span></code></a></li>
+<li><a class="reference internal" href="#golfball.stdAtm76.getStandardDensity"><code class="docutils literal notranslate"><span class="pre">getStandardDensity()</span></code></a></li>
+<li><a class="reference internal" href="#golfball.stdAtm76.getStandardPressure"><code class="docutils literal notranslate"><span class="pre">getStandardPressure()</span></code></a></li>
+<li><a class="reference internal" href="#golfball.stdAtm76.getStandardTemperature"><code class="docutils literal notranslate"><span class="pre">getStandardTemperature()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-golfball">Module contents</a><ul>
+<li><a class="reference internal" href="#golfball.Sim"><code class="docutils literal notranslate"><span class="pre">Sim</span></code></a><ul>
+<li><a class="reference internal" href="#golfball.Sim.read_inputs"><code class="docutils literal notranslate"><span class="pre">Sim.read_inputs()</span></code></a></li>
+<li><a class="reference internal" href="#golfball.Sim.run"><code class="docutils literal notranslate"><span class="pre">Sim.run()</span></code></a></li>
+<li><a class="reference internal" href="#golfball.Sim.write_default_inputs"><code class="docutils literal notranslate"><span class="pre">Sim.write_default_inputs()</span></code></a></li>
+<li><a class="reference internal" href="#golfball.Sim.write_outputs"><code class="docutils literal notranslate"><span class="pre">Sim.write_outputs()</span></code></a></li>
+<li><a class="reference internal" href="#golfball.Sim.write_qoi"><code class="docutils literal notranslate"><span class="pre">Sim.write_qoi()</span></code></a></li>
+<li><a class="reference internal" href="#golfball.Sim.write_trajectories"><code class="docutils literal notranslate"><span class="pre">Sim.write_trajectories()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#golfball.load_gball_h5"><code class="docutils literal notranslate"><span class="pre">load_gball_h5()</span></code></a></li>
+<li><a class="reference internal" href="#golfball.main"><code class="docutils literal notranslate"><span class="pre">main()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="modules.html"
+                          title="previous chapter">golfball</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="changelog.html"
+                          title="next chapter">Changelog</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/golfball.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>  
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="changelog.html" title="Changelog"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="modules.html" title="golfball"
+             >previous</a> |</li>
+          <li><img src="_static/py.svg" alt="Python logo" style="vertical-align: middle; margin-top: -1px"></li>
+          <li><a href="https://www.python.org/">Python</a> &#187;</li>
+          <li class="switchers">
+            <div class="language_switcher_placeholder"></div>
+            <div class="version_switcher_placeholder"></div>
+          </li>
+          <li>
+              
+              <a href="index.html">golfball 3.0.0 documentation</a> &#187;
+              
+          </li>
+          <li class="nav-item nav-item-1"><a href="modules.html" >golfball</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">golfball package</a></li>
+                <li class="right">
+                    
+
+    <div class="inline-search" role="search">
+        <form class="inline-search" action="search.html" method="get">
+          <input placeholder="Quick search" aria-label="Quick search" type="search" name="q" id="search-box">
+          <input type="submit" value="Go">
+        </form>
+    </div>
+                     |
+                </li>
+            <li class="right">
+<label class="theme-selector-label">
+    Theme
+    <select class="theme-selector" oninput="activateTheme(this.value)">
+        <option value="auto" selected>Auto</option>
+        <option value="light">Light</option>
+        <option value="dark">Dark</option>
+    </select>
+</label> |</li>
+            
+      </ul>
+    </div>  
+    <div class="footer">
+    &copy; 
+    Copyright
+     2020, Erik S. Bailey.
+    <br>
+    This page is licensed under the Python Software Foundation License Version 2.
+    <br>
+    Examples, recipes, and other code in the documentation are additionally licensed under the Zero Clause BSD License.
+    <br>
+    
+    
+    <br>
+
+    The Python Software Foundation is a non-profit corporation.
+<a href="https://www.python.org/psf/donations/">Please donate.</a>
+<br>
+    <br>
+    
+    <br>
+
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
+    </div>
+
+  </body>
+</html>

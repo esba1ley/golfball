@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>golfball.stdAtm76 &#8212; golfball 3.0.0 documentation</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../_static/classic.css?v=67a6116b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pydoctheme.css?v=5ff89526" />
+    <link id="pygments_dark_css" media="(prefers-color-scheme: dark)" rel="stylesheet" type="text/css" href="../../_static/pygments_dark.css?v=5349f25f" />
+    
+    <script src="../../_static/documentation_options.js?v=acc74ff5"></script>
+    <script src="../../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /><link rel="stylesheet" href="../../_static/pydoctheme_dark.css" media="(prefers-color-scheme: dark)" id="pydoctheme_dark_css">
+    <link rel="shortcut icon" type="image/png" href="../../_static/py.svg">
+            <script type="text/javascript" src="../../_static/copybutton.js"></script>
+            <script type="text/javascript" src="../../_static/menu.js"></script>
+            <script type="text/javascript" src="../../_static/search-focus.js"></script>
+            <script type="text/javascript" src="../../_static/themetoggle.js"></script> 
+  </head>
+<body>
+<div class="mobile-nav">
+    <input type="checkbox" id="menuToggler" class="toggler__input" aria-controls="navigation"
+           aria-pressed="false" aria-expanded="false" role="button" aria-label="Menu">
+    <nav class="nav-content" role="navigation">
+        <label for="menuToggler" class="toggler__label">
+            <span></span>
+        </label>
+        <span class="nav-items-wrapper">
+            <a href="https://www.python.org/" class="nav-logo">
+                <img src="../../_static/py.svg" alt="Python logo">
+            </a>
+            <span class="version_switcher_placeholder"></span>
+            <form role="search" class="search" action="../../search.html" method="get">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" class="search-icon">
+                    <path fill-rule="nonzero" fill="currentColor" d="M15.5 14h-.79l-.28-.27a6.5 6.5 0 001.48-5.34c-.47-2.78-2.79-5-5.59-5.34a6.505 6.505 0 00-7.27 7.27c.34 2.8 2.56 5.12 5.34 5.59a6.5 6.5 0 005.34-1.48l.27.28v.79l4.25 4.25c.41.41 1.08.41 1.49 0 .41-.41.41-1.08 0-1.49L15.5 14zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path>
+                </svg>
+                <input placeholder="Quick search" aria-label="Quick search" type="search" name="q">
+                <input type="submit" value="Go">
+            </form>
+        </span>
+    </nav>
+    <div class="menu-wrapper">
+        <nav class="menu" role="navigation" aria-label="main navigation">
+            <div class="language_switcher_placeholder"></div>
+            
+<label class="theme-selector-label">
+    Theme
+    <select class="theme-selector" oninput="activateTheme(this.value)">
+        <option value="auto" selected>Auto</option>
+        <option value="light">Light</option>
+        <option value="dark">Dark</option>
+    </select>
+</label>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </nav>
+    </div>
+</div>
+  
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+          <li><img src="../../_static/py.svg" alt="Python logo" style="vertical-align: middle; margin-top: -1px"></li>
+          <li><a href="https://www.python.org/">Python</a> &#187;</li>
+          <li class="switchers">
+            <div class="language_switcher_placeholder"></div>
+            <div class="version_switcher_placeholder"></div>
+          </li>
+          <li>
+              
+              <a href="../../index.html">golfball 3.0.0 documentation</a> &#187;
+              
+          </li>
+          <li class="nav-item nav-item-1"><a href="../index.html" accesskey="U">Module code</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">golfball.stdAtm76</a></li>
+                <li class="right">
+                    
+
+    <div class="inline-search" role="search">
+        <form class="inline-search" action="../../search.html" method="get">
+          <input placeholder="Quick search" aria-label="Quick search" type="search" name="q" id="search-box">
+          <input type="submit" value="Go">
+        </form>
+    </div>
+                     |
+                </li>
+            <li class="right">
+<label class="theme-selector-label">
+    Theme
+    <select class="theme-selector" oninput="activateTheme(this.value)">
+        <option value="auto" selected>Auto</option>
+        <option value="light">Light</option>
+        <option value="dark">Dark</option>
+    </select>
+</label> |</li>
+            
+      </ul>
+    </div>    
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <h1>Source code for golfball.stdAtm76</h1><div class="highlight"><pre>
+<span></span><span class="c1">#pylint: disable=C0103</span>
+<span class="c1"># TODO: (esb) rename things so they match snake case.</span>
+
+<span class="sd">&quot;&quot;&quot;Module for querying the 1976 US Standard Atmosphere.&quot;&quot;&quot;</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>   <span class="c1"># needed for np.sqrt() and np.exp()</span>
+
+
+<div class="viewcode-block" id="getGeopotential">
+<a class="viewcode-back" href="../../golfball.html#golfball.stdAtm76.getGeopotential">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">getGeopotential</span><span class="p">(</span><span class="n">altitude</span><span class="p">,</span> <span class="n">units</span><span class="o">=</span><span class="s1">&#39;km&#39;</span><span class="p">,</span> <span class="n">earth_radius</span><span class="o">=</span><span class="mf">6356.766</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Return the geopotential altitude in the units specified.</span>
+
+<span class="sd">    Current units supported are &#39;m&#39; and &#39;km&#39;</span>
+
+<span class="sd">    geopot_height = earth_radius * altitude / (earth_radius + altitude)</span>
+
+<span class="sd">    computations done in km.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">if</span> <span class="n">units</span> <span class="o">==</span> <span class="s1">&#39;m&#39;</span><span class="p">:</span>
+        <span class="n">altitude_km</span> <span class="o">=</span> <span class="n">altitude</span><span class="o">/</span><span class="mf">1000.0</span>
+    <span class="k">elif</span> <span class="n">units</span> <span class="o">==</span> <span class="s1">&#39;km&#39;</span><span class="p">:</span>
+        <span class="n">altitude_km</span> <span class="o">=</span> <span class="n">altitude</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;units must be specified as &quot;m&quot; or &quot;km&quot;.&#39;</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">earth_radius</span> <span class="o">*</span> <span class="n">altitude_km</span> <span class="o">/</span> <span class="p">(</span><span class="n">earth_radius</span> <span class="o">+</span> <span class="n">altitude_km</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="getStandardTemperature">
+<a class="viewcode-back" href="../../golfball.html#golfball.stdAtm76.getStandardTemperature">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">getStandardTemperature</span><span class="p">(</span><span class="n">geopot_height</span><span class="o">=</span><span class="mf">0.0</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Get the Standard Temparature from a given Geopotential Height.</span>
+
+<span class="sd">    Standard atmospheric temperature, in kelvins (273.15 + Celsius)</span>
+<span class="sd">    Below 51 km: Practical Meteorology by Roland Stull, pg 12</span>
+<span class="sd">    Above 51 km: http://www.braeunig.us/space/atmmodel.htm</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">geopot_height</span> <span class="o">&lt;=</span> <span class="mi">11</span><span class="p">:</span>       <span class="c1"># Troposphere</span>
+        <span class="n">temperature</span> <span class="o">=</span> <span class="mf">288.15</span> <span class="o">-</span> <span class="p">(</span><span class="mf">6.5</span> <span class="o">*</span> <span class="n">geopot_height</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">geopot_height</span> <span class="o">&lt;=</span> <span class="mi">20</span><span class="p">:</span>     <span class="c1"># Stratosphere starts</span>
+        <span class="n">temperature</span> <span class="o">=</span> <span class="mf">216.65</span>
+    <span class="k">elif</span> <span class="n">geopot_height</span> <span class="o">&lt;=</span> <span class="mi">32</span><span class="p">:</span>
+        <span class="n">temperature</span> <span class="o">=</span> <span class="mf">196.65</span> <span class="o">+</span> <span class="n">geopot_height</span>
+    <span class="k">elif</span> <span class="n">geopot_height</span> <span class="o">&lt;=</span> <span class="mi">47</span><span class="p">:</span>
+        <span class="n">temperature</span> <span class="o">=</span> <span class="mf">228.65</span> <span class="o">+</span> <span class="mf">2.8</span> <span class="o">*</span> <span class="p">(</span><span class="n">geopot_height</span> <span class="o">-</span> <span class="mi">32</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">geopot_height</span> <span class="o">&lt;=</span> <span class="mi">51</span><span class="p">:</span>     <span class="c1"># Mesosphere starts</span>
+        <span class="n">temperature</span> <span class="o">=</span> <span class="mf">270.65</span>
+    <span class="k">elif</span> <span class="n">geopot_height</span> <span class="o">&lt;=</span> <span class="mi">71</span><span class="p">:</span>
+        <span class="n">temperature</span> <span class="o">=</span> <span class="mf">270.65</span> <span class="o">-</span> <span class="mf">2.8</span> <span class="o">*</span> <span class="p">(</span><span class="n">geopot_height</span> <span class="o">-</span> <span class="mi">51</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">geopot_height</span> <span class="o">&lt;=</span> <span class="mf">84.85</span><span class="p">:</span>
+        <span class="n">temperature</span> <span class="o">=</span> <span class="mf">214.65</span> <span class="o">-</span> <span class="mi">2</span> <span class="o">*</span> <span class="p">(</span><span class="n">geopot_height</span> <span class="o">-</span> <span class="mi">71</span><span class="p">)</span>
+    <span class="c1"># Thermosphere has high kinetic temperature (500 C to 2000 C) but temperature</span>
+    <span class="c1"># as measured by a thermometer would be very low because of almost vacuum.</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;geopot_height must be less than 84.85 km.&#39;</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">temperature</span></div>
+
+
+<div class="viewcode-block" id="getStandardPressure">
+<a class="viewcode-back" href="../../golfball.html#golfball.stdAtm76.getStandardPressure">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">getStandardPressure</span><span class="p">(</span><span class="n">altitude</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">units</span><span class="o">=</span><span class="s1">&#39;km&#39;</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Get the standard Pressure given an altitude.</span>
+
+<span class="sd">    Below 51 km: Practical Meteorology by Roland Stull, pg 12</span>
+<span class="sd">    Above 51 km: http://www.braeunig.us/space/atmmodel.htm</span>
+
+<span class="sd">    Validation data:</span>
+<span class="sd">    https://www.avs.org/AVS/files/c7/c7edaedb-95b2-438f-adfb-36de54f87b9e.pdf</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">geopot_height</span> <span class="o">=</span> <span class="n">getGeopotential</span><span class="p">(</span><span class="n">altitude</span><span class="p">,</span> <span class="n">units</span><span class="o">=</span><span class="n">units</span><span class="p">)</span>
+
+    <span class="n">t</span> <span class="o">=</span> <span class="n">getStandardTemperature</span><span class="p">(</span><span class="n">geopot_height</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">geopot_height</span> <span class="o">&lt;=</span> <span class="mi">11</span><span class="p">:</span>
+        <span class="n">pressure</span> <span class="o">=</span> <span class="mf">101325.0</span> <span class="o">*</span> <span class="p">(</span><span class="mf">288.15</span> <span class="o">/</span> <span class="n">t</span><span class="p">)</span> <span class="o">**</span> <span class="o">-</span><span class="mf">5.255877</span>
+    <span class="k">elif</span> <span class="n">geopot_height</span> <span class="o">&lt;=</span> <span class="mi">20</span><span class="p">:</span>
+        <span class="n">pressure</span> <span class="o">=</span> <span class="mf">22632.06</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="mf">0.1577</span> <span class="o">*</span> <span class="p">(</span><span class="n">geopot_height</span> <span class="o">-</span> <span class="mi">11</span><span class="p">))</span>
+    <span class="k">elif</span> <span class="n">geopot_height</span> <span class="o">&lt;=</span> <span class="mi">32</span><span class="p">:</span>
+        <span class="n">pressure</span> <span class="o">=</span> <span class="mf">5474.889</span> <span class="o">*</span> <span class="p">(</span><span class="mf">216.65</span> <span class="o">/</span> <span class="n">t</span><span class="p">)</span> <span class="o">**</span> <span class="mf">34.16319</span>
+    <span class="k">elif</span> <span class="n">geopot_height</span> <span class="o">&lt;=</span> <span class="mi">47</span><span class="p">:</span>
+        <span class="n">pressure</span> <span class="o">=</span> <span class="mf">868.0187</span> <span class="o">*</span> <span class="p">(</span><span class="mf">228.65</span> <span class="o">/</span> <span class="n">t</span><span class="p">)</span> <span class="o">**</span> <span class="mf">12.2011</span>
+    <span class="k">elif</span> <span class="n">geopot_height</span> <span class="o">&lt;=</span> <span class="mi">51</span><span class="p">:</span>
+        <span class="n">pressure</span> <span class="o">=</span> <span class="mf">110.9063</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="mf">0.1262</span> <span class="o">*</span> <span class="p">(</span><span class="n">geopot_height</span> <span class="o">-</span> <span class="mi">47</span><span class="p">))</span>
+    <span class="k">elif</span> <span class="n">geopot_height</span> <span class="o">&lt;=</span> <span class="mi">71</span><span class="p">:</span>
+        <span class="n">pressure</span> <span class="o">=</span> <span class="mf">66.93887</span> <span class="o">*</span> <span class="p">(</span><span class="mf">270.65</span> <span class="o">/</span> <span class="n">t</span><span class="p">)</span> <span class="o">**</span> <span class="o">-</span><span class="mf">12.2011</span>
+    <span class="k">elif</span> <span class="n">geopot_height</span> <span class="o">&lt;=</span> <span class="mf">84.85</span><span class="p">:</span>
+        <span class="n">pressure</span> <span class="o">=</span> <span class="mf">3.956420</span> <span class="o">*</span> <span class="p">(</span><span class="mf">214.65</span> <span class="o">/</span> <span class="n">t</span><span class="p">)</span> <span class="o">**</span> <span class="o">-</span><span class="mf">17.0816</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;altitude must be less than 84.85 km.&#39;</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">pressure</span></div>
+
+
+<div class="viewcode-block" id="getStandardDensity">
+<a class="viewcode-back" href="../../golfball.html#golfball.stdAtm76.getStandardDensity">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">getStandardDensity</span><span class="p">(</span><span class="n">altitude</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">units</span><span class="o">=</span><span class="s1">&#39;km&#39;</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Get the Standard Density given an altitude.</span>
+
+<span class="sd">    Returns density as a function of altitude from the</span>
+<span class="sd">    Standard Pressure and Standard Temperature using the</span>
+<span class="sd">    Ideal Gas Law</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">M</span> <span class="o">=</span> <span class="mf">0.0289644</span> <span class="c1"># kg/mol</span>
+    <span class="n">R</span> <span class="o">=</span> <span class="mf">8.3144598</span> <span class="c1"># N*m/(mol*K) -- for air</span>
+    <span class="k">return</span> <span class="p">(</span><span class="n">M</span> <span class="o">*</span> <span class="n">getStandardPressure</span><span class="p">(</span><span class="n">altitude</span><span class="p">,</span> <span class="n">units</span><span class="o">=</span><span class="n">units</span><span class="p">))</span><span class="o">/</span> \
+           <span class="p">(</span><span class="n">R</span> <span class="o">*</span> <span class="n">getStandardTemperature</span><span class="p">(</span><span class="n">getGeopotential</span><span class="p">(</span><span class="n">altitude</span><span class="p">,</span>
+                                                       <span class="n">units</span><span class="o">=</span><span class="n">units</span><span class="p">)))</span></div>
+
+
+<div class="viewcode-block" id="getSpeedOfSound">
+<a class="viewcode-back" href="../../golfball.html#golfball.stdAtm76.getSpeedOfSound">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">getSpeedOfSound</span><span class="p">(</span><span class="n">altitude</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">units</span><span class="o">=</span><span class="s1">&#39;km&#39;</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Calculate the speed of sound.</span>
+
+<span class="sd">    Assumes units are &#39;km&#39;, unless otherwise specified in &#39;m&#39;.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">dens</span> <span class="o">=</span> <span class="n">getStandardDensity</span><span class="p">(</span><span class="n">altitude</span><span class="p">,</span> <span class="n">units</span><span class="o">=</span><span class="n">units</span><span class="p">)</span>
+    <span class="n">pres</span> <span class="o">=</span> <span class="n">getStandardPressure</span><span class="p">(</span><span class="n">altitude</span><span class="p">,</span> <span class="n">units</span><span class="o">=</span><span class="n">units</span><span class="p">)</span>
+    <span class="n">gamma</span> <span class="o">=</span> <span class="mf">1.4</span>
+
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">gamma</span> <span class="o">*</span> <span class="n">pres</span><span class="o">/</span><span class="n">dens</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="getDynViscosity">
+<a class="viewcode-back" href="../../golfball.html#golfball.stdAtm76.getDynViscosity">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">getDynViscosity</span><span class="p">(</span><span class="n">T</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Return the dynamic viscosity in Pascal-Seconds.</span>
+
+<span class="sd">    - of a air (80% N2 20% 02)</span>
+<span class="sd">    - at a specified temperature in Kelvin.</span>
+
+<span class="sd">    Inputs</span>
+<span class="sd">    ------</span>
+<span class="sd">    T: int or float (in degrees K)</span>
+<span class="sd">       specified temperature</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    Dynamnic viscosity: float (in Pa*s)</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">mu_0</span> <span class="o">=</span> <span class="mf">18.27</span>   <span class="c1"># uPa*s</span>
+    <span class="n">T_0</span> <span class="o">=</span> <span class="mf">291.15</span>  <span class="c1"># K</span>
+    <span class="n">C</span> <span class="o">=</span> <span class="mf">120.0</span>   <span class="c1"># K</span>
+
+    <span class="k">return</span> <span class="n">mu_0</span><span class="o">/</span><span class="mf">1e6</span> <span class="o">*</span> <span class="p">(</span><span class="n">T_0</span> <span class="o">+</span> <span class="n">C</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">T</span> <span class="o">+</span> <span class="n">C</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">T</span><span class="o">/</span><span class="n">T_0</span><span class="p">)</span><span class="o">**</span><span class="mf">1.5</span></div>
+
+
+<div class="viewcode-block" id="getReynoldsNumber">
+<a class="viewcode-back" href="../../golfball.html#golfball.stdAtm76.getReynoldsNumber">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">getReynoldsNumber</span><span class="p">(</span><span class="n">velocity</span><span class="p">,</span> <span class="n">rho</span><span class="p">,</span> <span class="n">l_ref</span><span class="p">,</span> <span class="n">temp</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Compute the reynolds number (unitless).</span>
+
+<span class="sd">    Inputs</span>
+<span class="sd">    -------</span>
+<span class="sd">    velocity: fluid-relative velocity</span>
+<span class="sd">    rho:      fluid density [kg/m^3]</span>
+<span class="sd">    l_ref:    reference length [meters]</span>
+<span class="sd">    temp:     fluid temperature [Kelvin]</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">return</span> <span class="n">velocity</span> <span class="o">*</span> <span class="n">rho</span> <span class="o">*</span> <span class="n">l_ref</span> <span class="o">/</span> <span class="n">getDynViscosity</span><span class="p">(</span><span class="n">temp</span><span class="p">)</span></div>
+
+</pre></div>
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>  
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+          <li><img src="../../_static/py.svg" alt="Python logo" style="vertical-align: middle; margin-top: -1px"></li>
+          <li><a href="https://www.python.org/">Python</a> &#187;</li>
+          <li class="switchers">
+            <div class="language_switcher_placeholder"></div>
+            <div class="version_switcher_placeholder"></div>
+          </li>
+          <li>
+              
+              <a href="../../index.html">golfball 3.0.0 documentation</a> &#187;
+              
+          </li>
+          <li class="nav-item nav-item-1"><a href="../index.html" >Module code</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">golfball.stdAtm76</a></li>
+                <li class="right">
+                    
+
+    <div class="inline-search" role="search">
+        <form class="inline-search" action="../../search.html" method="get">
+          <input placeholder="Quick search" aria-label="Quick search" type="search" name="q" id="search-box">
+          <input type="submit" value="Go">
+        </form>
+    </div>
+                     |
+                </li>
+            <li class="right">
+<label class="theme-selector-label">
+    Theme
+    <select class="theme-selector" oninput="activateTheme(this.value)">
+        <option value="auto" selected>Auto</option>
+        <option value="light">Light</option>
+        <option value="dark">Dark</option>
+    </select>
+</label> |</li>
+            
+      </ul>
+    </div>  
+    <div class="footer">
+    &copy; 
+    Copyright
+     2020, Erik S. Bailey.
+    <br>
+    This page is licensed under the Python Software Foundation License Version 2.
+    <br>
+    Examples, recipes, and other code in the documentation are additionally licensed under the Zero Clause BSD License.
+    <br>
+    
+    
+    <br>
+
+    The Python Software Foundation is a non-profit corporation.
+<a href="https://www.python.org/psf/donations/">Please donate.</a>
+<br>
+    <br>
+    
+    <br>
+
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
+    </div>
+
+  </body>
+</html>

@@ -1,0 +1,7 @@
+{
+    "esbonio.logging.level": "debug",
+    "esbonio.sphinx.pythonCommand": [
+        "/Users/esbailey/miniconda3/envs/wolven/bin/python"
+    ],
+    "makefile.configureOnOpen": false,
+}

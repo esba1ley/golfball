@@ -1,0 +1,23 @@
+# Golfball Sim Inputs
+config:
+  out_filename: projectile_outputs.yml
+  traj_filename: projectile_trajectory.h5
+  write_traj: false
+time:
+  t_init: 0.0
+  t_stop: 20.0
+  dt: 0.01
+state:
+  angle: 0.0
+  azimuth: 0.0
+  vel_mag: 70.0
+  pos_LL: [0.0, 0.0, 0.0]
+  w_LL_B_LL: [0.0, 0.0, 0.0]
+params:
+  m: 0.0459
+  D: 0.04222
+  eD: 0.0125
+  S: 0.000005
+  g_LL: [0.0, 0.0, -9.81]
+  rho_scale: 1.0
+  wind: [0.0, 0.0, 0.0]

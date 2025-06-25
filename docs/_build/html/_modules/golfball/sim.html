@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>golfball.sim &#8212; golfball 3.0.0 documentation</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../_static/classic.css?v=67a6116b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pydoctheme.css?v=5ff89526" />
+    <link id="pygments_dark_css" media="(prefers-color-scheme: dark)" rel="stylesheet" type="text/css" href="../../_static/pygments_dark.css?v=5349f25f" />
+    
+    <script src="../../_static/documentation_options.js?v=acc74ff5"></script>
+    <script src="../../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /><link rel="stylesheet" href="../../_static/pydoctheme_dark.css" media="(prefers-color-scheme: dark)" id="pydoctheme_dark_css">
+    <link rel="shortcut icon" type="image/png" href="../../_static/py.svg">
+            <script type="text/javascript" src="../../_static/copybutton.js"></script>
+            <script type="text/javascript" src="../../_static/menu.js"></script>
+            <script type="text/javascript" src="../../_static/search-focus.js"></script>
+            <script type="text/javascript" src="../../_static/themetoggle.js"></script> 
+  </head>
+<body>
+<div class="mobile-nav">
+    <input type="checkbox" id="menuToggler" class="toggler__input" aria-controls="navigation"
+           aria-pressed="false" aria-expanded="false" role="button" aria-label="Menu">
+    <nav class="nav-content" role="navigation">
+        <label for="menuToggler" class="toggler__label">
+            <span></span>
+        </label>
+        <span class="nav-items-wrapper">
+            <a href="https://www.python.org/" class="nav-logo">
+                <img src="../../_static/py.svg" alt="Python logo">
+            </a>
+            <span class="version_switcher_placeholder"></span>
+            <form role="search" class="search" action="../../search.html" method="get">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" class="search-icon">
+                    <path fill-rule="nonzero" fill="currentColor" d="M15.5 14h-.79l-.28-.27a6.5 6.5 0 001.48-5.34c-.47-2.78-2.79-5-5.59-5.34a6.505 6.505 0 00-7.27 7.27c.34 2.8 2.56 5.12 5.34 5.59a6.5 6.5 0 005.34-1.48l.27.28v.79l4.25 4.25c.41.41 1.08.41 1.49 0 .41-.41.41-1.08 0-1.49L15.5 14zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path>
+                </svg>
+                <input placeholder="Quick search" aria-label="Quick search" type="search" name="q">
+                <input type="submit" value="Go">
+            </form>
+        </span>
+    </nav>
+    <div class="menu-wrapper">
+        <nav class="menu" role="navigation" aria-label="main navigation">
+            <div class="language_switcher_placeholder"></div>
+            
+<label class="theme-selector-label">
+    Theme
+    <select class="theme-selector" oninput="activateTheme(this.value)">
+        <option value="auto" selected>Auto</option>
+        <option value="light">Light</option>
+        <option value="dark">Dark</option>
+    </select>
+</label>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </nav>
+    </div>
+</div>
+  
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+          <li><img src="../../_static/py.svg" alt="Python logo" style="vertical-align: middle; margin-top: -1px"></li>
+          <li><a href="https://www.python.org/">Python</a> &#187;</li>
+          <li class="switchers">
+            <div class="language_switcher_placeholder"></div>
+            <div class="version_switcher_placeholder"></div>
+          </li>
+          <li>
+              
+              <a href="../../index.html">golfball 3.0.0 documentation</a> &#187;
+              
+          </li>
+          <li class="nav-item nav-item-1"><a href="../index.html" accesskey="U">Module code</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">golfball.sim</a></li>
+                <li class="right">
+                    
+
+    <div class="inline-search" role="search">
+        <form class="inline-search" action="../../search.html" method="get">
+          <input placeholder="Quick search" aria-label="Quick search" type="search" name="q" id="search-box">
+          <input type="submit" value="Go">
+        </form>
+    </div>
+                     |
+                </li>
+            <li class="right">
+<label class="theme-selector-label">
+    Theme
+    <select class="theme-selector" oninput="activateTheme(this.value)">
+        <option value="auto" selected>Auto</option>
+        <option value="light">Light</option>
+        <option value="dark">Dark</option>
+    </select>
+</label> |</li>
+            
+      </ul>
+    </div>    
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <h1>Source code for golfball.sim</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;3D Golf Ball demo simulation with varying Drag Crisis and Magus Effect.&quot;&quot;&quot;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">sys</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">argparse</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">ruamel.yaml</span><span class="w"> </span><span class="kn">import</span> <span class="n">YAML</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">scipy.integrate</span><span class="w"> </span><span class="kn">import</span> <span class="n">odeint</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">.stdAtm76</span><span class="w"> </span><span class="kn">import</span> <span class="n">getStandardDensity</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">.stdAtm76</span><span class="w"> </span><span class="kn">import</span> <span class="n">getStandardTemperature</span><span class="p">,</span> <span class="n">getGeopotential</span><span class="p">,</span> <span class="n">getReynoldsNumber</span>
+
+<span class="n">DEFAULT_INPUT_FILE</span> <span class="o">=</span> <span class="s1">&#39;projectile_inputs.yml&#39;</span>
+<span class="c1"># NOTE: make sure all tests referring to this file import this variable</span>
+
+<span class="n">DEFAULT_OUTPUT_FILE</span> <span class="o">=</span> <span class="s1">&#39;projectile_outputs.yml&#39;</span>
+
+<span class="n">DEFAULT_INPUTS_YAML</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;&quot;&quot;</span><span class="se">\</span>
+<span class="s2"># Golfball Sim Inputs</span>
+<span class="s2">config:</span>
+<span class="s2">  out_filename: </span><span class="si">{</span><span class="n">DEFAULT_OUTPUT_FILE</span><span class="si">}</span>
+<span class="s2">  traj_filename: &#39;projectile_trajectory.h5&#39;</span>
+<span class="s2">  write_traj: false</span>
+<span class="s2">time: </span>
+<span class="s2">  t_init: 0.0</span>
+<span class="s2">  t_stop: 20.0</span>
+<span class="s2">  dt: 0.01</span>
+<span class="s2">state:</span>
+<span class="s2">  angle: 38.0</span>
+<span class="s2">  azimuth: 0.0</span>
+<span class="s2">  vel_mag: 70.0</span>
+<span class="s2">  pos_LL: [0.0, 0.0, 0.0]</span>
+<span class="s2">  w_LL_B_LL: [0.0, 0.0, 0.0]</span>
+<span class="s2">params:</span>
+<span class="s2">  m: 0.0459</span>
+<span class="s2">  D: 0.04222</span>
+<span class="s2">  eD: 0.0125</span>
+<span class="s2">  S: 0.000005  </span>
+<span class="s2">  g_LL: [0.0, 0.0, -9.81]</span>
+<span class="s2">  rho_scale: 1.0</span>
+<span class="s2">  wind: [0.0, 0.0, 0.0]</span>
+<span class="s2">&quot;&quot;&quot;</span>
+
+
+<div class="viewcode-block" id="main">
+<a class="viewcode-back" href="../../golfball.html#golfball.sim.main">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">arg_list</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Read in the inputs, run the sim, write out the outputs.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    arg_list : list of str, optional</span>
+<span class="sd">        List of individual commandline arguments to invoke main with. If</span>
+<span class="sd">        omitted, the actual commandline arguments will be used.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">arg_list</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">arg_list</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span>
+    <span class="n">args</span> <span class="o">=</span> <span class="n">get_args</span><span class="p">(</span><span class="n">arg_list</span><span class="p">)</span>
+
+    <span class="n">sim</span> <span class="o">=</span> <span class="n">Sim</span><span class="p">(</span><span class="n">args</span><span class="p">)</span>
+    <span class="n">sim</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+    <span class="n">sim</span><span class="o">.</span><span class="n">write_outputs</span><span class="p">()</span></div>
+
+
+
+<div class="viewcode-block" id="get_args">
+<a class="viewcode-back" href="../../golfball.html#golfball.sim.get_args">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">get_args</span><span class="p">(</span><span class="n">arg_list</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Make CLI argument parser and parse arguments.&quot;&quot;&quot;</span>
+    <span class="n">parser</span> <span class="o">=</span> <span class="n">_make_parser</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">parser</span><span class="o">.</span><span class="n">parse_args</span><span class="p">(</span><span class="n">arg_list</span><span class="p">)</span></div>
+
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">_make_parser</span><span class="p">():</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Define command line interface (CLI) argument parser.&quot;&quot;&quot;</span>
+    <span class="n">parser</span> <span class="o">=</span> <span class="n">argparse</span><span class="o">.</span><span class="n">ArgumentParser</span><span class="p">()</span>
+
+    <span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s2">&quot;--verbose&quot;</span><span class="p">,</span> <span class="s2">&quot;-v&quot;</span><span class="p">,</span> <span class="n">action</span><span class="o">=</span><span class="s1">&#39;store_true&#39;</span><span class="p">,</span>
+                        <span class="n">help</span><span class="o">=</span><span class="s2">&quot;print inputs and outputs to STDOUT&quot;</span><span class="p">)</span>
+
+    <span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span>
+        <span class="s2">&quot;--in_filename&quot;</span><span class="p">,</span> <span class="s1">&#39;-i&#39;</span><span class="p">,</span>
+        <span class="n">metavar</span><span class="o">=</span><span class="s2">&quot;IN_FILENAME&quot;</span><span class="p">,</span>
+        <span class="n">nargs</span><span class="o">=</span><span class="s2">&quot;?&quot;</span><span class="p">,</span>
+        <span class="n">default</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">help</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;filename of YAML w/ inputs (default: </span><span class="si">{</span><span class="n">DEFAULT_INPUT_FILE</span><span class="si">}</span><span class="s2">)&quot;</span><span class="p">,</span>
+    <span class="p">)</span>
+
+    <span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s1">&#39;--t_init&#39;</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="nb">float</span><span class="p">,</span>
+                        <span class="n">help</span><span class="o">=</span><span class="s2">&quot;initial sim time. default: specified by input&quot;</span>
+                        <span class="s2">&quot; file)&quot;</span><span class="p">)</span>
+    <span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s1">&#39;--t_stop&#39;</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="nb">float</span><span class="p">,</span>
+                        <span class="n">help</span><span class="o">=</span><span class="s2">&quot;simulation max time.  default: specified by input&quot;</span>
+                        <span class="s2">&quot; file&quot;</span><span class="p">)</span>
+    <span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s1">&#39;--dt&#39;</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="nb">float</span><span class="p">,</span>
+                        <span class="n">help</span><span class="o">=</span><span class="s2">&quot;simulation time step.  default: specified by&quot;</span>
+                        <span class="s2">&quot; input file&quot;</span><span class="p">)</span>
+    <span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s1">&#39;--pos_LL&#39;</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="nb">float</span><span class="p">,</span> <span class="n">nargs</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span>
+                        <span class="n">help</span><span class="o">=</span><span class="s2">&quot;initial position vector in Local Level frame.&quot;</span>
+                        <span class="s2">&quot;  default: specified by input file&quot;</span><span class="p">)</span>
+    <span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s1">&#39;--w_LL_B_LL&#39;</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="nb">float</span><span class="p">,</span> <span class="n">nargs</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span>
+                        <span class="n">help</span><span class="o">=</span><span class="s2">&quot;initial angular velocity vector in Local Level&quot;</span>
+                        <span class="s2">&quot; frame.  default: specified by input file&quot;</span><span class="p">)</span>    
+    <span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s1">&#39;--vel_mag&#39;</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="nb">float</span><span class="p">,</span>
+                        <span class="n">help</span><span class="o">=</span><span class="s2">&quot;initial velocity magnitude.  default: specified&quot;</span>
+                        <span class="s2">&quot; by input file&quot;</span><span class="p">)</span>
+    <span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s1">&#39;--angle&#39;</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="nb">float</span><span class="p">,</span>
+                        <span class="n">help</span><span class="o">=</span><span class="s2">&quot;launch angle above horizontal.  default:&quot;</span>
+                        <span class="s2">&quot; specified by input file&quot;</span><span class="p">)</span>
+    <span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s1">&#39;--azimuth&#39;</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="nb">float</span><span class="p">,</span>
+                        <span class="n">help</span><span class="o">=</span><span class="s2">&quot;launch angle about z axis.  default:&quot;</span>
+                        <span class="s2">&quot; specified by input file&quot;</span><span class="p">)</span>      
+    <span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s1">&#39;--m&#39;</span><span class="p">,</span> <span class="s1">&#39;-m&#39;</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="nb">float</span><span class="p">,</span>
+                        <span class="n">help</span><span class="o">=</span><span class="s2">&quot;golf ball mass.  default: specified by input&quot;</span>
+                        <span class="s2">&quot; file&quot;</span><span class="p">)</span>
+    <span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s1">&#39;--D&#39;</span><span class="p">,</span> <span class="s1">&#39;-D&#39;</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="nb">float</span><span class="p">,</span>
+                        <span class="n">help</span><span class="o">=</span><span class="s2">&quot;golf ball diameter.  default: specified by input&quot;</span>
+                        <span class="s2">&quot; file&quot;</span><span class="p">)</span>
+    <span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s1">&#39;--eD&#39;</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="nb">float</span><span class="p">,</span>
+                        <span class="n">help</span><span class="o">=</span><span class="s2">&quot;dimple size ratio.  default: specified by input&quot;</span>
+                        <span class="s2">&quot; file&quot;</span><span class="p">)</span>
+    <span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s1">&#39;--S&#39;</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="nb">float</span><span class="p">,</span>
+                        <span class="n">help</span><span class="o">=</span><span class="s2">&quot;Magnus Effect parameter.  default: specified by input file&quot;</span><span class="p">)</span>
+    <span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s1">&#39;--g_LL&#39;</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="nb">float</span><span class="p">,</span>
+                        <span class="n">help</span><span class="o">=</span><span class="s2">&quot;gravity vector in Local Level frame.  default:&quot;</span>
+                        <span class="s2">&quot; specified by input file&quot;</span><span class="p">)</span>
+    <span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s1">&#39;--rho_scale&#39;</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="nb">float</span><span class="p">,</span>
+                        <span class="n">help</span><span class="o">=</span><span class="s2">&quot;density scale multiplier.  default: specified by&quot;</span>
+                        <span class="s2">&quot; input file&quot;</span><span class="p">)</span>
+    <span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s1">&#39;--wind&#39;</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="nb">float</span><span class="p">,</span> <span class="n">nargs</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span>
+                        <span class="n">help</span><span class="o">=</span><span class="s2">&quot;constant wind vector in Local Level.  default:&quot;</span>
+                        <span class="s2">&quot; specified by input file&quot;</span><span class="p">)</span>
+    <span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s2">&quot;--out_filename&quot;</span><span class="p">,</span> <span class="s1">&#39;-o&#39;</span><span class="p">,</span> <span class="n">metavar</span><span class="o">=</span><span class="s2">&quot;OUT_FILENAME&quot;</span><span class="p">,</span>
+                        <span class="n">nargs</span><span class="o">=</span><span class="s2">&quot;?&quot;</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s2">&quot;name of YAML output file&quot;</span>
+                        <span class="s2">&quot; for QoI.  default: specified by input file&quot;</span><span class="p">)</span>
+    <span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s1">&#39;--write_traj&#39;</span><span class="p">,</span> <span class="n">action</span><span class="o">=</span><span class="s1">&#39;store_true&#39;</span><span class="p">,</span>
+                        <span class="n">help</span><span class="o">=</span><span class="s2">&quot;flag to write trajectory file.  default: False&quot;</span><span class="p">)</span>
+    <span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s1">&#39;--traj_filename&#39;</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                        <span class="n">help</span><span class="o">=</span><span class="s2">&quot;trajectory output filename.  default: specified&quot;</span>
+                        <span class="s2">&quot; by input file&quot;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">parser</span>
+
+
+<span class="n">CD_TABLE_FILE</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="vm">__file__</span><span class="p">),</span> <span class="s1">&#39;cd_table.h5&#39;</span><span class="p">)</span>
+<span class="n">CD_TABLE</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_hdf</span><span class="p">(</span><span class="n">CD_TABLE_FILE</span><span class="p">,</span> <span class="s1">&#39;/cd_table&#39;</span><span class="p">)</span>
+
+
+<div class="viewcode-block" id="calc_drag_coeff">
+<a class="viewcode-back" href="../../golfball.html#golfball.sim.calc_drag_coeff">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">calc_drag_coeff</span><span class="p">(</span><span class="n">height</span><span class="p">,</span> <span class="n">vel_mag</span><span class="p">,</span> <span class="n">l_ref</span><span class="p">,</span> <span class="n">rho</span><span class="p">,</span> <span class="n">dimple_size</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Calcualte the Coefficient of Drag (Cd).</span>
+
+<span class="sd">    Calculate Cd as a function of height, velocity magnitude,</span>
+<span class="sd">    reference length, and density.  Note:  this assumes a</span>
+<span class="sd">    Temperature profile from the US Standard ATM, and uses CD</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">temp</span> <span class="o">=</span> <span class="n">getStandardTemperature</span><span class="p">(</span><span class="n">getGeopotential</span><span class="p">(</span><span class="n">height</span><span class="p">,</span> <span class="n">units</span><span class="o">=</span><span class="s1">&#39;m&#39;</span><span class="p">))</span>
+    <span class="n">reynolds_no</span> <span class="o">=</span> <span class="n">getReynoldsNumber</span><span class="p">(</span><span class="n">vel_mag</span><span class="p">,</span> <span class="n">rho</span><span class="p">,</span> <span class="n">l_ref</span><span class="p">,</span> <span class="n">temp</span><span class="p">)</span>
+
+    <span class="n">drag_coeff</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">interp</span><span class="p">(</span><span class="n">reynolds_no</span><span class="p">,</span> <span class="n">CD_TABLE</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">values</span><span class="p">,</span>
+                           <span class="n">CD_TABLE</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span> <span class="n">dimple_size</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">drag_coeff</span><span class="p">,</span> <span class="n">reynolds_no</span></div>
+
+
+
+<div class="viewcode-block" id="Sim">
+<a class="viewcode-back" href="../../golfball.html#golfball.sim.Sim">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">Sim</span><span class="p">():</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;The primary simulation object.&quot;&quot;&quot;</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">args</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">inputs</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">yaml</span> <span class="o">=</span> <span class="n">YAML</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">traj</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">qoi</span> <span class="o">=</span> <span class="p">{}</span>
+
+        <span class="c1"># Use an argparser if no args are passed in</span>
+        <span class="k">if</span> <span class="n">args</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">args</span> <span class="o">=</span> <span class="n">get_args</span><span class="p">()</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">args</span> <span class="o">=</span> <span class="n">args</span>
+
+        <span class="c1"># if we&#39;re asking for the default input file and it doesn&#39;t exist,</span>
+        <span class="c1"># create it.</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">args</span><span class="o">.</span><span class="n">in_filename</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isfile</span><span class="p">(</span><span class="n">DEFAULT_INPUT_FILE</span><span class="p">):</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">write_default_inputs</span><span class="p">()</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">inputs</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">read_inputs</span><span class="p">(</span><span class="n">DEFAULT_INPUT_FILE</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="c1"># if we specified an input file, load it</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">inputs</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">read_inputs</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">args</span><span class="o">.</span><span class="n">in_filename</span><span class="p">)</span>
+
+        <span class="n">input_groups</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">inputs</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span>
+
+        <span class="c1"># pylint: disable=E1136</span>
+        <span class="c1"># NOTE (esb): self.inputs is a dictionary with keys, read from a YAML</span>
+        <span class="c1">#             file E1136 from pylint is not correct.</span>
+        <span class="k">for</span> <span class="n">input_group</span> <span class="ow">in</span> <span class="n">input_groups</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">argname</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">inputs</span><span class="p">[</span><span class="n">input_group</span><span class="p">]</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+                <span class="n">val</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">args</span><span class="p">,</span> <span class="n">argname</span><span class="p">)</span>
+                <span class="k">if</span> <span class="n">argname</span> <span class="o">!=</span> <span class="s1">&#39;write_traj&#39;</span><span class="p">:</span>
+                    <span class="k">if</span> <span class="n">val</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                        <span class="bp">self</span><span class="o">.</span><span class="n">inputs</span><span class="p">[</span><span class="n">input_group</span><span class="p">][</span><span class="n">argname</span><span class="p">]</span> <span class="o">=</span> <span class="n">val</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="k">if</span> <span class="n">val</span> <span class="ow">is</span> <span class="kc">True</span><span class="p">:</span>
+                        <span class="bp">self</span><span class="o">.</span><span class="n">inputs</span><span class="p">[</span><span class="n">input_group</span><span class="p">][</span><span class="n">argname</span><span class="p">]</span> <span class="o">=</span> <span class="n">val</span>
+        <span class="c1"># pylint: enable=E1136</span>
+
+<div class="viewcode-block" id="Sim.write_default_inputs">
+<a class="viewcode-back" href="../../golfball.html#golfball.sim.Sim.write_default_inputs">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">write_default_inputs</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Write default parameters to the default input file.&quot;&quot;&quot;</span>
+
+        <span class="n">default_input</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">yaml</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">DEFAULT_INPUTS_YAML</span><span class="p">)</span>
+
+        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">DEFAULT_INPUT_FILE</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf8&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f_def_inp</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">yaml</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">default_input</span><span class="p">,</span> <span class="n">f_def_inp</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="Sim.read_inputs">
+<a class="viewcode-back" href="../../golfball.html#golfball.sim.Sim.read_inputs">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">read_inputs</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">filename</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Read inputs YAML file.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        filename : type</span>
+<span class="sd">            Input YAML file.</span>
+
+<span class="sd">        Raises</span>
+<span class="sd">        ------</span>
+<span class="sd">        FileNotFoundError :</span>
+<span class="sd">            Raised if the specified file is not present.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isfile</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="ne">FileNotFoundError</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">filename</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+
+        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;utf8&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">inputfile</span><span class="p">:</span>
+            <span class="n">inputs</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">yaml</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">inputfile</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">inputs</span></div>
+
+
+<div class="viewcode-block" id="Sim.write_qoi">
+<a class="viewcode-back" href="../../golfball.html#golfball.sim.Sim.write_qoi">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">write_qoi</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Write Quantities of Interest to YAML.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        qoi : dict</span>
+<span class="sd">            Quantities of Interest to write out.</span>
+<span class="sd">        filename : str</span>
+<span class="sd">            name of YAML output file for QoI</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">inputs</span><span class="p">[</span><span class="s1">&#39;config&#39;</span><span class="p">][</span><span class="s1">&#39;out_filename&#39;</span><span class="p">],</span> <span class="s1">&#39;w&#39;</span><span class="p">,</span>
+                  <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;utf8&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">fh_in</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">yaml</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">qoi</span><span class="p">,</span> <span class="n">fh_in</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="Sim.write_trajectories">
+<a class="viewcode-back" href="../../golfball.html#golfball.sim.Sim.write_trajectories">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">write_trajectories</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">filename</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Save full trajectory to traj_df.h5 HDF5 file.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        filename : str</span>
+<span class="sd">            Name of the output file for the trajectory HDF5.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">traj</span><span class="o">.</span><span class="n">to_hdf</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s1">&#39;/traj_df&#39;</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="Sim.write_outputs">
+<a class="viewcode-back" href="../../golfball.html#golfball.sim.Sim.write_outputs">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">write_outputs</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Write quantities of interest to YAML, and optional traj to HDF5.&quot;&quot;&quot;</span>
+        <span class="c1"># Save QoI to YAML file</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">write_qoi</span><span class="p">()</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">inputs</span><span class="p">[</span><span class="s1">&#39;config&#39;</span><span class="p">][</span><span class="s1">&#39;write_traj&#39;</span><span class="p">]:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">write_trajectories</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">inputs</span><span class="p">[</span><span class="s1">&#39;config&#39;</span><span class="p">][</span><span class="s1">&#39;traj_filename&#39;</span><span class="p">])</span></div>
+
+
+<div class="viewcode-block" id="Sim.run">
+<a class="viewcode-back" href="../../golfball.html#golfball.sim.Sim.run">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Run the simulation.&quot;&quot;&quot;</span>
+        <span class="k">def</span><span class="w"> </span><span class="nf">print_inputs</span><span class="p">(</span><span class="n">gname</span><span class="p">):</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">gname</span><span class="si">}</span><span class="s1"> Parameters&#39;</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;----------------&#39;</span><span class="p">)</span>
+            <span class="n">names</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">inputs</span><span class="p">[</span><span class="n">gname</span><span class="p">]</span><span class="o">.</span><span class="n">keys</span><span class="p">()))</span>
+            <span class="n">max_width</span> <span class="o">=</span> <span class="nb">max</span><span class="p">([</span><span class="nb">len</span><span class="p">(</span><span class="n">name</span><span class="p">)</span> <span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">names</span><span class="p">])</span>
+            <span class="n">output_str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+            <span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">names</span><span class="p">:</span>
+                <span class="n">output_str</span> <span class="o">+=</span> <span class="p">(</span><span class="sa">f</span><span class="s1">&#39;-- </span><span class="si">{</span><span class="n">name</span><span class="o">.</span><span class="n">ljust</span><span class="p">(</span><span class="n">max_width</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="si">}</span><span class="s1">: &#39;</span>
+                               <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">inputs</span><span class="p">[</span><span class="n">gname</span><span class="p">][</span><span class="n">name</span><span class="p">]</span><span class="si">}</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">output_str</span><span class="p">)</span>
+
+        <span class="c1">#  Print the input parameters</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">args</span><span class="o">.</span><span class="n">verbose</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">input_group</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">inputs</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+                <span class="n">print_inputs</span><span class="p">(</span><span class="n">input_group</span><span class="p">)</span>
+
+        <span class="c1"># pylint: disable=C0103,W0613</span>
+        <span class="c1"># NOTE (esb): &quot;t&quot; argument dictated by ODE solver, despite note being</span>
+        <span class="c1">#             used (W0613)</span>
+        <span class="c1"># TODO: (esb) consider using better, longer variable names. (C0103)</span>
+
+        <span class="k">def</span><span class="w"> </span><span class="nf">x_dot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">params</span><span class="p">):</span>
+<span class="w">            </span><span class="sd">&quot;&quot;&quot;Differential equations for ODE solver.</span>
+
+<span class="sd">            x is a vector consisting of [p_x, p_y, p_z, v_x, v_y, v_z, theta_x, theta_y, theta_z, w_x, w_y, w_z]</span>
+<span class="sd">            &quot;&quot;&quot;</span>
+            <span class="n">mass</span> <span class="o">=</span> <span class="n">params</span><span class="p">[</span><span class="s1">&#39;m&#39;</span><span class="p">]</span>
+            <span class="n">g</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">params</span><span class="p">[</span><span class="s1">&#39;g_LL&#39;</span><span class="p">])</span>
+            <span class="n">A</span> <span class="o">=</span> <span class="p">(</span><span class="n">params</span><span class="p">[</span><span class="s1">&#39;D&#39;</span><span class="p">]</span> <span class="o">/</span> <span class="mf">2.0</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span>
+            <span class="n">eD</span> <span class="o">=</span> <span class="n">params</span><span class="p">[</span><span class="s1">&#39;eD&#39;</span><span class="p">]</span>
+            <span class="n">S</span> <span class="o">=</span> <span class="n">params</span><span class="p">[</span><span class="s1">&#39;S&#39;</span><span class="p">]</span>
+
+            <span class="n">wind_rel_vel</span> <span class="o">=</span> <span class="n">x</span><span class="p">[</span><span class="mi">3</span><span class="p">:</span><span class="mi">6</span><span class="p">]</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">params</span><span class="p">[</span><span class="s1">&#39;wind&#39;</span><span class="p">])</span>
+            <span class="n">wind_vel_mag</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">wind_rel_vel</span><span class="p">)</span>
+            <span class="n">vel_mag</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">3</span><span class="p">:</span><span class="mi">6</span><span class="p">])</span>
+            <span class="n">fpa</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arctan2</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">5</span><span class="p">],</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">3</span><span class="p">:</span><span class="mi">5</span><span class="p">]))</span>
+            <span class="n">rho</span> <span class="o">=</span> <span class="n">getStandardDensity</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">units</span><span class="o">=</span><span class="s1">&#39;m&#39;</span><span class="p">)</span> <span class="o">*</span> <span class="n">params</span><span class="p">[</span><span class="s1">&#39;rho_scale&#39;</span><span class="p">]</span>
+            <span class="n">l_ref</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">4</span> <span class="o">*</span> <span class="n">A</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">)</span>
+            <span class="n">Cd</span><span class="p">,</span> <span class="n">Re</span> <span class="o">=</span> <span class="n">calc_drag_coeff</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">wind_vel_mag</span><span class="p">,</span> <span class="n">l_ref</span><span class="p">,</span> <span class="n">rho</span><span class="p">,</span> <span class="n">eD</span><span class="p">)</span>
+
+            <span class="n">q_dyn</span> <span class="o">=</span> <span class="mf">0.5</span> <span class="o">*</span> <span class="n">rho</span> <span class="o">*</span> <span class="n">wind_vel_mag</span><span class="o">**</span><span class="mi">2</span>
+            <span class="n">drag_vec</span> <span class="o">=</span> <span class="o">-</span><span class="n">q_dyn</span> <span class="o">*</span> <span class="n">Cd</span> <span class="o">*</span> <span class="n">A</span> <span class="o">*</span> <span class="n">wind_rel_vel</span> <span class="o">/</span> <span class="n">wind_vel_mag</span>
+            <span class="n">magnus_vec</span> <span class="o">=</span> <span class="n">S</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">cross</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">9</span><span class="p">:</span><span class="mi">12</span><span class="p">],</span> <span class="n">wind_rel_vel</span><span class="p">)</span>
+            <span class="n">accel_vec</span> <span class="o">=</span> <span class="p">(</span><span class="n">drag_vec</span> <span class="o">+</span> <span class="n">magnus_vec</span><span class="p">)</span> <span class="o">/</span> <span class="n">mass</span> <span class="o">+</span> <span class="n">g</span> 
+
+            <span class="n">derivs</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span>  <span class="c1"># map \dot{x} to itself</span>
+                      <span class="n">x</span><span class="p">[</span><span class="mi">4</span><span class="p">],</span>  <span class="c1"># map \dot{y} to itself</span>
+                      <span class="n">x</span><span class="p">[</span><span class="mi">5</span><span class="p">],</span>  <span class="c1"># map \dot{z} to itself</span>
+                      <span class="n">accel_vec</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>
+                      <span class="n">accel_vec</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span>
+                      <span class="n">accel_vec</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span>
+                      <span class="n">x</span><span class="p">[</span><span class="mi">9</span><span class="p">],</span>
+                      <span class="n">x</span><span class="p">[</span><span class="mi">10</span><span class="p">],</span>
+                      <span class="n">x</span><span class="p">[</span><span class="mi">11</span><span class="p">],</span>
+                      <span class="mf">0.0</span><span class="p">,</span>  <span class="c1"># no angular acceleration modeled</span>
+                      <span class="mf">0.0</span><span class="p">,</span>  <span class="c1"># no angular acceleration modeled</span>
+                      <span class="mf">0.0</span><span class="p">]</span>  <span class="c1"># no angular acceleration modeled</span>
+            <span class="k">return</span> <span class="n">derivs</span>
+        <span class="c1"># pylint: enable=C0103,W0613</span>
+
+        <span class="c1"># Initial Condition</span>
+        <span class="n">ang</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">inputs</span><span class="p">[</span><span class="s1">&#39;state&#39;</span><span class="p">][</span><span class="s1">&#39;angle&#39;</span><span class="p">]</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">/</span> <span class="mf">180.</span>
+        <span class="n">az</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">inputs</span><span class="p">[</span><span class="s1">&#39;state&#39;</span><span class="p">][</span><span class="s1">&#39;azimuth&#39;</span><span class="p">]</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">/</span> <span class="mf">180.</span>
+        <span class="n">vel_mag</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">inputs</span><span class="p">[</span><span class="s1">&#39;state&#39;</span><span class="p">][</span><span class="s1">&#39;vel_mag&#39;</span><span class="p">]</span>
+        <span class="n">x0</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">inputs</span><span class="p">[</span><span class="s2">&quot;state&quot;</span><span class="p">][</span><span class="s2">&quot;pos_LL&quot;</span><span class="p">]</span>
+            <span class="o">+</span> <span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">ang</span><span class="p">)</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">az</span><span class="p">)</span> <span class="o">*</span> <span class="n">vel_mag</span><span class="p">,</span> 
+               <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">ang</span><span class="p">)</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">az</span><span class="p">)</span> <span class="o">*</span> <span class="n">vel_mag</span><span class="p">,</span>
+               <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">ang</span><span class="p">)</span> <span class="o">*</span> <span class="n">vel_mag</span><span class="p">]</span>
+            <span class="o">+</span> <span class="p">[</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">]</span>
+            <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">inputs</span><span class="p">[</span><span class="s2">&quot;state&quot;</span><span class="p">][</span><span class="s2">&quot;w_LL_B_LL&quot;</span><span class="p">]</span>
+        <span class="p">)</span>
+        <span class="c1"># print(f&#39;x0: {x0}&#39;)</span>
+
+        <span class="c1"># time vector</span>
+        <span class="n">dt</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">inputs</span><span class="p">[</span><span class="s1">&#39;time&#39;</span><span class="p">][</span><span class="s1">&#39;dt&#39;</span><span class="p">]</span>
+        <span class="n">t_init</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">inputs</span><span class="p">[</span><span class="s1">&#39;time&#39;</span><span class="p">][</span><span class="s1">&#39;t_init&#39;</span><span class="p">]</span>
+        <span class="n">t_stop</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">inputs</span><span class="p">[</span><span class="s1">&#39;time&#39;</span><span class="p">][</span><span class="s1">&#39;t_stop&#39;</span><span class="p">]</span>
+        <span class="n">time</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">t_init</span><span class="p">,</span> <span class="n">t_stop</span><span class="p">,</span> <span class="n">dt</span><span class="p">)</span>
+
+        <span class="c1"># integrate the ODE</span>
+        <span class="n">traj</span> <span class="o">=</span> <span class="n">odeint</span><span class="p">(</span><span class="n">x_dot</span><span class="p">,</span> <span class="n">x0</span><span class="p">,</span> <span class="n">time</span><span class="p">,</span> <span class="n">args</span><span class="o">=</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">inputs</span><span class="p">[</span><span class="s1">&#39;params&#39;</span><span class="p">],))</span>
+
+        <span class="c1"># Trim to only be for heights above initial height</span>
+        <span class="n">mask_above_init_height</span> <span class="o">=</span> <span class="n">traj</span><span class="p">[:,</span> <span class="mi">2</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="n">traj</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
+        <span class="n">traj</span> <span class="o">=</span> <span class="n">traj</span><span class="p">[</span><span class="n">mask_above_init_height</span><span class="p">]</span>
+        <span class="n">time</span> <span class="o">=</span> <span class="n">time</span><span class="p">[</span><span class="n">mask_above_init_height</span><span class="p">]</span>
+
+        <span class="c1"># Store Quantities of Interest</span>
+        <span class="n">rel_pos</span> <span class="o">=</span> <span class="n">traj</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">:</span><span class="mi">3</span><span class="p">]</span> <span class="o">-</span> <span class="n">traj</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">:</span><span class="mi">3</span><span class="p">]</span>
+        <span class="n">ground_dist</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">traj</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">:</span><span class="mi">2</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+        <span class="n">height</span> <span class="o">=</span> <span class="n">rel_pos</span><span class="p">[:,</span> <span class="mi">2</span><span class="p">]</span>
+        <span class="n">max_height</span> <span class="o">=</span> <span class="n">height</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
+        <span class="n">t_at_max_h</span> <span class="o">=</span> <span class="n">time</span><span class="p">[</span><span class="n">height</span><span class="o">.</span><span class="n">argmax</span><span class="p">()]</span>
+        <span class="n">range_mag</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">rel_pos</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+        <span class="n">max_range</span> <span class="o">=</span> <span class="n">range_mag</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
+        <span class="n">i_max_range</span> <span class="o">=</span> <span class="n">range_mag</span><span class="o">.</span><span class="n">argmax</span><span class="p">()</span>
+        <span class="n">h_at_max_range</span> <span class="o">=</span> <span class="n">height</span><span class="p">[</span><span class="n">i_max_range</span><span class="p">]</span>
+        <span class="n">t_at_max_range</span> <span class="o">=</span> <span class="n">time</span><span class="p">[</span><span class="n">i_max_range</span><span class="p">]</span>
+        <span class="n">time_of_flight</span> <span class="o">=</span> <span class="n">time</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">qoi</span><span class="p">[</span><span class="s1">&#39;max_height&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">max_height</span><span class="p">)</span>
+        <span class="c1"># self.qoi[&#39;t_at_max_height&#39;] = float(t_at_max_h)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">qoi</span><span class="p">[</span><span class="s1">&#39;max_range&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">max_range</span><span class="p">)</span>
+        <span class="c1"># self.qoi[&#39;t_at_max_range&#39;] = float(t_at_max_range)</span>
+        <span class="c1"># self.qoi[&#39;h_at_max_range&#39;] = float(h_at_max_range)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">qoi</span><span class="p">[</span><span class="s1">&#39;time_of_flight&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">time_of_flight</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">args</span><span class="o">.</span><span class="n">verbose</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Quantities of Interest (QoI):&#39;</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;-----------------------------&#39;</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;-- Distance Travelled: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">qoi</span><span class="p">[</span><span class="s1">&#39;max_range&#39;</span><span class="p">]</span><span class="si">:</span><span class="s2">12.6f</span><span class="si">}</span><span class="s2"> m&quot;</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;-- Max Height:         </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">qoi</span><span class="p">[</span><span class="s1">&#39;max_height&#39;</span><span class="p">]</span><span class="si">:</span><span class="s2">12.6f</span><span class="si">}</span><span class="s2"> m&quot;</span><span class="p">)</span>
+            <span class="c1"># print(&#39;-- time @ max height:  %12.6f s&#39; %</span>
+            <span class="c1">#       float(t_at_max_h))</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;-- time @ impact:      </span><span class="si">{</span><span class="nb">float</span><span class="p">(</span><span class="n">time_of_flight</span><span class="p">)</span><span class="si">:</span><span class="s1">12.6f</span><span class="si">}</span><span class="s1"> s&#39;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">traj</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">traj</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">traj</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;p_LL_x&#39;</span><span class="p">,</span> <span class="s1">&#39;p_LL_y&#39;</span><span class="p">,</span> <span class="s1">&#39;p_LL_z&#39;</span><span class="p">,</span>
+                             <span class="s1">&#39;v_LL_x&#39;</span><span class="p">,</span> <span class="s1">&#39;v_LL_y&#39;</span><span class="p">,</span> <span class="s1">&#39;v_LL_z&#39;</span><span class="p">,</span>
+                             <span class="s1">&#39;theta_x&#39;</span><span class="p">,</span> <span class="s1">&#39;theta_y&#39;</span><span class="p">,</span> <span class="s1">&#39;theta_z&#39;</span><span class="p">,</span>
+                             <span class="s1">&#39;w_x&#39;</span><span class="p">,</span> <span class="s1">&#39;w_y&#39;</span><span class="p">,</span> <span class="s1">&#39;w_z&#39;</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">traj</span><span class="o">.</span><span class="n">index</span> <span class="o">=</span> <span class="n">time</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">traj</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;time&#39;</span></div>
+</div>
+
+
+
+<div class="viewcode-block" id="load_gball_h5">
+<a class="viewcode-back" href="../../golfball.html#golfball.sim.load_gball_h5">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">load_gball_h5</span><span class="p">(</span><span class="n">h5_file</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Load the saved Pandas DataFrame from the specified HDF5 file.&quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_hdf</span><span class="p">(</span><span class="n">h5_file</span><span class="p">,</span> <span class="s1">&#39;/traj_df&#39;</span><span class="p">)</span></div>
+
+
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div>
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>  
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+          <li><img src="../../_static/py.svg" alt="Python logo" style="vertical-align: middle; margin-top: -1px"></li>
+          <li><a href="https://www.python.org/">Python</a> &#187;</li>
+          <li class="switchers">
+            <div class="language_switcher_placeholder"></div>
+            <div class="version_switcher_placeholder"></div>
+          </li>
+          <li>
+              
+              <a href="../../index.html">golfball 3.0.0 documentation</a> &#187;
+              
+          </li>
+          <li class="nav-item nav-item-1"><a href="../index.html" >Module code</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">golfball.sim</a></li>
+                <li class="right">
+                    
+
+    <div class="inline-search" role="search">
+        <form class="inline-search" action="../../search.html" method="get">
+          <input placeholder="Quick search" aria-label="Quick search" type="search" name="q" id="search-box">
+          <input type="submit" value="Go">
+        </form>
+    </div>
+                     |
+                </li>
+            <li class="right">
+<label class="theme-selector-label">
+    Theme
+    <select class="theme-selector" oninput="activateTheme(this.value)">
+        <option value="auto" selected>Auto</option>
+        <option value="light">Light</option>
+        <option value="dark">Dark</option>
+    </select>
+</label> |</li>
+            
+      </ul>
+    </div>  
+    <div class="footer">
+    &copy; 
+    Copyright
+     2020, Erik S. Bailey.
+    <br>
+    This page is licensed under the Python Software Foundation License Version 2.
+    <br>
+    Examples, recipes, and other code in the documentation are additionally licensed under the Zero Clause BSD License.
+    <br>
+    
+    
+    <br>
+
+    The Python Software Foundation is a non-profit corporation.
+<a href="https://www.python.org/psf/donations/">Please donate.</a>
+<br>
+    <br>
+    
+    <br>
+
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
+    </div>
+
+  </body>
+</html>

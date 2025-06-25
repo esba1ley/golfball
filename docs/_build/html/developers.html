@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>For Developers &#8212; golfball 3.0.0 documentation</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/classic.css?v=67a6116b" />
+    <link rel="stylesheet" type="text/css" href="_static/pydoctheme.css?v=5ff89526" />
+    <link id="pygments_dark_css" media="(prefers-color-scheme: dark)" rel="stylesheet" type="text/css" href="_static/pygments_dark.css?v=5349f25f" />
+    
+    <script src="_static/documentation_options.js?v=acc74ff5"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="golfball" href="modules.html" />
+    <link rel="prev" title="Examples" href="examples.html" /><link rel="stylesheet" href="_static/pydoctheme_dark.css" media="(prefers-color-scheme: dark)" id="pydoctheme_dark_css">
+    <link rel="shortcut icon" type="image/png" href="_static/py.svg">
+            <script type="text/javascript" src="_static/copybutton.js"></script>
+            <script type="text/javascript" src="_static/menu.js"></script>
+            <script type="text/javascript" src="_static/search-focus.js"></script>
+            <script type="text/javascript" src="_static/themetoggle.js"></script> 
+  </head>
+<body>
+<div class="mobile-nav">
+    <input type="checkbox" id="menuToggler" class="toggler__input" aria-controls="navigation"
+           aria-pressed="false" aria-expanded="false" role="button" aria-label="Menu">
+    <nav class="nav-content" role="navigation">
+        <label for="menuToggler" class="toggler__label">
+            <span></span>
+        </label>
+        <span class="nav-items-wrapper">
+            <a href="https://www.python.org/" class="nav-logo">
+                <img src="_static/py.svg" alt="Python logo">
+            </a>
+            <span class="version_switcher_placeholder"></span>
+            <form role="search" class="search" action="search.html" method="get">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" class="search-icon">
+                    <path fill-rule="nonzero" fill="currentColor" d="M15.5 14h-.79l-.28-.27a6.5 6.5 0 001.48-5.34c-.47-2.78-2.79-5-5.59-5.34a6.505 6.505 0 00-7.27 7.27c.34 2.8 2.56 5.12 5.34 5.59a6.5 6.5 0 005.34-1.48l.27.28v.79l4.25 4.25c.41.41 1.08.41 1.49 0 .41-.41.41-1.08 0-1.49L15.5 14zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path>
+                </svg>
+                <input placeholder="Quick search" aria-label="Quick search" type="search" name="q">
+                <input type="submit" value="Go">
+            </form>
+        </span>
+    </nav>
+    <div class="menu-wrapper">
+        <nav class="menu" role="navigation" aria-label="main navigation">
+            <div class="language_switcher_placeholder"></div>
+            
+<label class="theme-selector-label">
+    Theme
+    <select class="theme-selector" oninput="activateTheme(this.value)">
+        <option value="auto" selected>Auto</option>
+        <option value="light">Light</option>
+        <option value="dark">Dark</option>
+    </select>
+</label>
+  <div>
+    <h3><a href="index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">For Developers</a><ul>
+<li><a class="reference internal" href="#repo-structure">Repo Structure</a></li>
+<li><a class="reference internal" href="#using-makefiles">Using Makefiles</a></li>
+<li><a class="reference internal" href="#local-development">Local Development</a></li>
+<li><a class="reference internal" href="#local-testing">Local Testing</a></li>
+<li><a class="reference internal" href="#building-documentation">Building Documentation</a></li>
+<li><a class="reference internal" href="#building-the-docker-app">Building the Docker App</a></li>
+<li><a class="reference internal" href="#testing-the-docker-app">Testing the Docker App</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="examples.html"
+                          title="previous chapter">Examples</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="modules.html"
+                          title="next chapter">golfball</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/developers.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </nav>
+    </div>
+</div>
+  
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="modules.html" title="golfball"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="examples.html" title="Examples"
+             accesskey="P">previous</a> |</li>
+          <li><img src="_static/py.svg" alt="Python logo" style="vertical-align: middle; margin-top: -1px"></li>
+          <li><a href="https://www.python.org/">Python</a> &#187;</li>
+          <li class="switchers">
+            <div class="language_switcher_placeholder"></div>
+            <div class="version_switcher_placeholder"></div>
+          </li>
+          <li>
+              
+              <a href="index.html">golfball 3.0.0 documentation</a> &#187;
+              
+          </li>
+        <li class="nav-item nav-item-this"><a href="">For Developers</a></li>
+                <li class="right">
+                    
+
+    <div class="inline-search" role="search">
+        <form class="inline-search" action="search.html" method="get">
+          <input placeholder="Quick search" aria-label="Quick search" type="search" name="q" id="search-box">
+          <input type="submit" value="Go">
+        </form>
+    </div>
+                     |
+                </li>
+            <li class="right">
+<label class="theme-selector-label">
+    Theme
+    <select class="theme-selector" oninput="activateTheme(this.value)">
+        <option value="auto" selected>Auto</option>
+        <option value="light">Light</option>
+        <option value="dark">Dark</option>
+    </select>
+</label> |</li>
+            
+      </ul>
+    </div>    
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="for-developers">
+<h1>For Developers<a class="headerlink" href="#for-developers" title="Link to this heading">¶</a></h1>
+<p>This page is a “how to” for developers.</p>
+<section id="repo-structure">
+<h2>Repo Structure<a class="headerlink" href="#repo-structure" title="Link to this heading">¶</a></h2>
+<p>This repository is structured as follows:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>.
+ ├── AUTHORS.rst . . . . . . . . Authors who contributed to code
+ ├── CHANGELOG.rst . . . . . . . Tagged/Released Version Change Log
+ ├── CONTRIBUTING.rst  . . . . . How to contribute to the project
+ ├── Dockerfile  . . . . . . . . Creates golfball app Docker image (portable)
+ ├── Jenkinsfile . . . . . . . . Jenkins pipeline definition to test golfball
+ ├── LICENSE . . . . . . . . . . Caltech license
+ ├── Makefile  . . . . . . . . . Developer shortcuts (with help!)
+ ├── README.rst  . . . . . . . . Repository top-level README
+ ├── container_test.sh . . . . . script to test golfball with Jenkins
+ ├── data  . . . . . . . . . . . DRAG MODEL SOURCE DATA
+ │   ├── cd_table.h5 . . . . . . HDF5 table used by golfball
+ │   ├── dimpledSpheresDragData/ directory with source drag data in it
+ │   └── write_cd_h5.py  . . . . script to generate HDF5 table for golfball
+ ├── docker_golfball_env . . . . GOLFBALL ENVIRONMENT DOCKER IMAGE FOR CI/CD
+ │   ├── Dockerfile  . . . . . . Creates golfball_env Docker image
+ │   ├── Makefile  . . . . . . . Developer shortcuts (with help!)
+ │   ├── condarc . . . . . . . . conda package manager configuration file
+ │   ├── entrypoint.sh . . . . . Docker image entrypoint script
+ │   └── golfball_env.yaml . . . Python dependencies and virtual env spec
+ ├── docs  . . . . . . . . . . . PACKAGE DOCUMENTATION
+ │   ├── Makefile  . . . . . . . Build Targets for documentation
+ │   ├── _static/  . . . . . . . directory w/ static content
+ │   ├── authors.rst . . . . . . include ../AUTHORS.rst
+ │   ├── changelog.rst . . . . . include ../CHANGELOG.rst
+ │   ├── conf.py . . . . . . . . Documentation Configuration
+ │   ├── contributing.rst  . . . include ../CONTRIBUTING.rst
+ │   ├── developers.rst  . . . . Documentation for Developers (this file)
+ │   ├── examples.rst  . . . . . How to use golfball package
+ │   ├── figures/  . . . . . . . Documentation Figures
+ │   ├── index.html  . . . . . . Redirect to _build/html/index.html
+ │   ├── index.rst . . . . . . . Top-level Documentation File
+ │   ├── install.rst . . . . . . Installation Documentation
+ │   ├── kudos.rst   . . . . . . &quot;Thanks&quot; recognition
+ │   ├── license.rst . . . . . . include ../LICENSE
+ │   ├── modules.rst . . . . . . code modules (extracts docstrings from code)
+ │   ├── quickstart.rst  . . . . How to get started quickly
+ │   └── requirements.txt  . . . sphinx build requirements
+ ├── golfball  . . . . . . . . . GOLFBALL PYTHON PACKAGE
+ │   ├── __init__.py . . . . . . Python package init file
+ │   ├── __version__.py  . . . . current tag/release
+ │   ├── cd_table.h5 . . . . . . data that gets installed by pip
+ │   ├── sim.py  . . . . . . . . Golfball Simulation
+ │   ├── stdAtm76.py . . . . . . Standard 1976 Atmosphere model
+ │   ├── utils.py  . . . . . . . utilities for testing
+ │   └── yaml2results.py . . . . convert sim output to Dakota results format
+ ├── setup.py  . . . . . . . . . PyPA/PyPI setuptools configuration
+ └── test  . . . . . . . . . . . AUTOMATED TESTS FOR PYTEST
+     ├── sim/  . . . . . . . . . golfball sim tests
+     ├── stdAtm76/ . . . . . . . atmosphere model tests
+     └── uq_dakota/  . . . . . . Dakota execution tests
+</pre></div>
+</div>
+<p>The above list was made by taking the output of:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>$ tree -L 2 .
+</pre></div>
+</div>
+<p>at the top level of this repository, and then annotating the descriptions
+manually in this file.</p>
+</section>
+<section id="using-makefiles">
+<h2>Using Makefiles<a class="headerlink" href="#using-makefiles" title="Link to this heading">¶</a></h2>
+<p>The bulk of development tasks are automated by Make targets in makefiles.  All
+makefiles have a built-in “help” target, that is also the default.  For example,
+in the top directory of this repository:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>$ make
+ -------------------- Makefile Target List --------------------------
+  Application for golfball:latest
+  Docker Registry: artifactory.jpl.nasa.gov:16003/gov/nasa/jpl/edlgnc
+ --------------------------------------------------------------------
+ help                 Display list of intended targets for user (DEFAULT)
+ test-all             check style, coverage, and run tests.
+ test                 run tests quickly with the default Python
+ coverage-report      generate code coverage report with pytest
+ pylint-report        check style with pylint
+ install              install the package to the active Python&#39;s site-packages
+ install-dev          install the package for active development
+ uninstall            uninstall the packge from the current environment
+ docs                 generate Sphinx HTML documentation, including API docs
+ clean                remove all artifacts
+ clean-build          remove build artifacts
+ clean-pyc            remove Python bytecode and object artifacts
+ clean-test           remove test reports, caches, and coverage artifacts
+ clean-docs           remove documentation build
+ clean-dakota         clean dakota run outputs
+ docker-build         Build docker image, using cached layers
+ docker-build-nc      Build docker image, WITHOUT cached layers
+ docker-run           run golfball in container as one-shot
+ docker-run-it        run docker image interactively
+ docker-test          test golfball inside the container
+ docker-pull          pull branch image from registry
+ docker-push          push branch image to registry
+ docker-archive       Create g-zipped tarball of image
+ --------------------------------------------------------------------
+</pre></div>
+</div>
+<p>The list above are the makefile targets the developer can do in that directory,
+with a short description of what they do.  For the specific commands, look in
+the <strong>Makefile</strong> itself.</p>
+</section>
+<section id="local-development">
+<h2>Local Development<a class="headerlink" href="#local-development" title="Link to this heading">¶</a></h2>
+<p>The golfball sim is written to be completely generic with no platform-dependent
+libraries.  Therefore, if you have a local Python environment, you can use
+<strong>pip</strong> to install this module as an editable module as instructed by the
+installation documentation.  If you want to not have pip auto-install the
+dependencies that golfball needs, see the installation instructions for which
+python packages you’ll need to install with your other package manager (e.g.
+conda).</p>
+</section>
+<section id="local-testing">
+<h2>Local Testing<a class="headerlink" href="#local-testing" title="Link to this heading">¶</a></h2>
+<p>Using the “test” make target will first ensure that the golfball package is
+installed as an editable package (you can make changes without needing to re-
+install) and then executes the full pytest suite, capturing data for a coverage
+report, and produces an HTML pytest report at <strong>reports/pytest/index.html</strong>.  In
+general, all targets involved in testing the code put their human-readable
+outputs into the <strong>reports/</strong> directory.</p>
+<p>To get the coverage report, run the “coverage_report” make target, and it will
+produce an HTML report at <strong>reports/coverage/index.html</strong>.</p>
+<p>To get a pylint report, run the “pylint_report” make target, and it will produce
+a pylint report as a text file at <strong>reports/pylint/pylint_report.txt</strong>.</p>
+<p>Note that you may see skipped tests for the dakota tests if dakota is not
+installed in your system path.  This is by design.  If you want the dakota tests
+to execute, check your dakota installation and make sure the executable is
+available in your system path.</p>
+</section>
+<section id="building-documentation">
+<h2>Building Documentation<a class="headerlink" href="#building-documentation" title="Link to this heading">¶</a></h2>
+<p>To build the documentation for this project, just use the “docs” target of the
+makefile.  The documentation is posted on GitHub Enterprise internal to JPL as
+part of the GitHub Pages feature, and it hosts from the master branch.</p>
+</section>
+<section id="building-the-docker-app">
+<h2>Building the Docker App<a class="headerlink" href="#building-the-docker-app" title="Link to this heading">¶</a></h2>
+<p>To build an executable image of the golfball package and its required
+environment for portability across platforms, use the “docker-build” makefile
+target.  This will first build the “environment” image, then the “application”
+image.  The use cases for the two different images are as follows:</p>
+<blockquote>
+<div><p>1. The <em>environment</em> image is used to build the environment once and speed up
+repeated building of the application image as Python code changes are made.
+It is also the image used by the Jenkins CI/CD workflow to automatically test
+the golfball code when changes are made in JPL GitHub Enterprise.</p>
+<p>2. The <em>application</em> image is the environment image with golfball installed
+in it.  This is the portable “batteries included” application that can be
+used in parallel computing.</p>
+</div></blockquote>
+</section>
+<section id="testing-the-docker-app">
+<h2>Testing the Docker App<a class="headerlink" href="#testing-the-docker-app" title="Link to this heading">¶</a></h2>
+<p>Use the “docker-test” make target to execute pytest <em>inside</em> the container to
+run the automated test suite in the container environment.  The test result will
+be an HTML report written at <strong>reports/container/pytest/index.html</strong>.</p>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">For Developers</a><ul>
+<li><a class="reference internal" href="#repo-structure">Repo Structure</a></li>
+<li><a class="reference internal" href="#using-makefiles">Using Makefiles</a></li>
+<li><a class="reference internal" href="#local-development">Local Development</a></li>
+<li><a class="reference internal" href="#local-testing">Local Testing</a></li>
+<li><a class="reference internal" href="#building-documentation">Building Documentation</a></li>
+<li><a class="reference internal" href="#building-the-docker-app">Building the Docker App</a></li>
+<li><a class="reference internal" href="#testing-the-docker-app">Testing the Docker App</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="examples.html"
+                          title="previous chapter">Examples</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="modules.html"
+                          title="next chapter">golfball</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/developers.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>  
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="modules.html" title="golfball"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="examples.html" title="Examples"
+             >previous</a> |</li>
+          <li><img src="_static/py.svg" alt="Python logo" style="vertical-align: middle; margin-top: -1px"></li>
+          <li><a href="https://www.python.org/">Python</a> &#187;</li>
+          <li class="switchers">
+            <div class="language_switcher_placeholder"></div>
+            <div class="version_switcher_placeholder"></div>
+          </li>
+          <li>
+              
+              <a href="index.html">golfball 3.0.0 documentation</a> &#187;
+              
+          </li>
+        <li class="nav-item nav-item-this"><a href="">For Developers</a></li>
+                <li class="right">
+                    
+
+    <div class="inline-search" role="search">
+        <form class="inline-search" action="search.html" method="get">
+          <input placeholder="Quick search" aria-label="Quick search" type="search" name="q" id="search-box">
+          <input type="submit" value="Go">
+        </form>
+    </div>
+                     |
+                </li>
+            <li class="right">
+<label class="theme-selector-label">
+    Theme
+    <select class="theme-selector" oninput="activateTheme(this.value)">
+        <option value="auto" selected>Auto</option>
+        <option value="light">Light</option>
+        <option value="dark">Dark</option>
+    </select>
+</label> |</li>
+            
+      </ul>
+    </div>  
+    <div class="footer">
+    &copy; 
+    Copyright
+     2020, Erik S. Bailey.
+    <br>
+    This page is licensed under the Python Software Foundation License Version 2.
+    <br>
+    Examples, recipes, and other code in the documentation are additionally licensed under the Zero Clause BSD License.
+    <br>
+    
+    
+    <br>
+
+    The Python Software Foundation is a non-profit corporation.
+<a href="https://www.python.org/psf/donations/">Please donate.</a>
+<br>
+    <br>
+    
+    <br>
+
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
+    </div>
+
+  </body>
+</html>

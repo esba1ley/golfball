@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Quickstart &#8212; golfball 3.0.0 documentation</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/classic.css?v=67a6116b" />
+    <link rel="stylesheet" type="text/css" href="_static/pydoctheme.css?v=5ff89526" />
+    <link id="pygments_dark_css" media="(prefers-color-scheme: dark)" rel="stylesheet" type="text/css" href="_static/pygments_dark.css?v=5349f25f" />
+    
+    <script src="_static/documentation_options.js?v=acc74ff5"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Examples" href="examples.html" />
+    <link rel="prev" title="Installation" href="install.html" /><link rel="stylesheet" href="_static/pydoctheme_dark.css" media="(prefers-color-scheme: dark)" id="pydoctheme_dark_css">
+    <link rel="shortcut icon" type="image/png" href="_static/py.svg">
+            <script type="text/javascript" src="_static/copybutton.js"></script>
+            <script type="text/javascript" src="_static/menu.js"></script>
+            <script type="text/javascript" src="_static/search-focus.js"></script>
+            <script type="text/javascript" src="_static/themetoggle.js"></script> 
+  </head>
+<body>
+<div class="mobile-nav">
+    <input type="checkbox" id="menuToggler" class="toggler__input" aria-controls="navigation"
+           aria-pressed="false" aria-expanded="false" role="button" aria-label="Menu">
+    <nav class="nav-content" role="navigation">
+        <label for="menuToggler" class="toggler__label">
+            <span></span>
+        </label>
+        <span class="nav-items-wrapper">
+            <a href="https://www.python.org/" class="nav-logo">
+                <img src="_static/py.svg" alt="Python logo">
+            </a>
+            <span class="version_switcher_placeholder"></span>
+            <form role="search" class="search" action="search.html" method="get">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" class="search-icon">
+                    <path fill-rule="nonzero" fill="currentColor" d="M15.5 14h-.79l-.28-.27a6.5 6.5 0 001.48-5.34c-.47-2.78-2.79-5-5.59-5.34a6.505 6.505 0 00-7.27 7.27c.34 2.8 2.56 5.12 5.34 5.59a6.5 6.5 0 005.34-1.48l.27.28v.79l4.25 4.25c.41.41 1.08.41 1.49 0 .41-.41.41-1.08 0-1.49L15.5 14zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path>
+                </svg>
+                <input placeholder="Quick search" aria-label="Quick search" type="search" name="q">
+                <input type="submit" value="Go">
+            </form>
+        </span>
+    </nav>
+    <div class="menu-wrapper">
+        <nav class="menu" role="navigation" aria-label="main navigation">
+            <div class="language_switcher_placeholder"></div>
+            
+<label class="theme-selector-label">
+    Theme
+    <select class="theme-selector" oninput="activateTheme(this.value)">
+        <option value="auto" selected>Auto</option>
+        <option value="light">Light</option>
+        <option value="dark">Dark</option>
+    </select>
+</label>
+  <div>
+    <h3><a href="index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">Quickstart</a><ul>
+<li><a class="reference internal" href="#command-line">Command Line</a></li>
+<li><a class="reference internal" href="#running-in-python">Running in Python</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="install.html"
+                          title="previous chapter">Installation</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="examples.html"
+                          title="next chapter">Examples</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/quickstart.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </nav>
+    </div>
+</div>
+  
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="examples.html" title="Examples"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="install.html" title="Installation"
+             accesskey="P">previous</a> |</li>
+          <li><img src="_static/py.svg" alt="Python logo" style="vertical-align: middle; margin-top: -1px"></li>
+          <li><a href="https://www.python.org/">Python</a> &#187;</li>
+          <li class="switchers">
+            <div class="language_switcher_placeholder"></div>
+            <div class="version_switcher_placeholder"></div>
+          </li>
+          <li>
+              
+              <a href="index.html">golfball 3.0.0 documentation</a> &#187;
+              
+          </li>
+        <li class="nav-item nav-item-this"><a href="">Quickstart</a></li>
+                <li class="right">
+                    
+
+    <div class="inline-search" role="search">
+        <form class="inline-search" action="search.html" method="get">
+          <input placeholder="Quick search" aria-label="Quick search" type="search" name="q" id="search-box">
+          <input type="submit" value="Go">
+        </form>
+    </div>
+                     |
+                </li>
+            <li class="right">
+<label class="theme-selector-label">
+    Theme
+    <select class="theme-selector" oninput="activateTheme(this.value)">
+        <option value="auto" selected>Auto</option>
+        <option value="light">Light</option>
+        <option value="dark">Dark</option>
+    </select>
+</label> |</li>
+            
+      </ul>
+    </div>    
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="quickstart">
+<span id="id1"></span><h1>Quickstart<a class="headerlink" href="#quickstart" title="Link to this heading">¶</a></h1>
+<section id="command-line">
+<h2>Command Line<a class="headerlink" href="#command-line" title="Link to this heading">¶</a></h2>
+<p>This package installs two command line tools:</p>
+<ul class="simple">
+<li><p><strong>gball</strong>: the simulation itself</p></li>
+<li><p><strong>yaml2results</strong>: converts the YAML output of the sim into a
+<a class="reference external" href="https://dakota.sandia.gov">Dakota</a> results file</p></li>
+</ul>
+<p>You can run <strong>gball</strong> as follows:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>$ gball
+</pre></div>
+</div>
+<p>and you’ll have both the default input file and output file written to the
+local directory: projectile_inputs.yml and projectile_outputs.yml,
+respectively. All the parameters you can change for the simulation are
+specified in the input file, which if you edit that file you can run the sim
+again, and it will use the local file named ‘projectile_inputs.yml’. If you
+copy and or re-name the input file, you can specify a different input file as
+follows (where we changed the launch angle to 10.0 degrees):</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>$ gball -i projectile_inputs_10deg.yml
+</pre></div>
+</div>
+<p>The ‘–verbose’ or ‘-v’ option shows the configuration and the results in a
+nice formatted way for the user to see what was run and what the results were:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>$ gball -i projectile_inputs_10deg.yml -v
+ Config Parameters
+ ----------------
+ -- out_filename   : projectile_outputs.yml
+ -- traj_filename  : projectile_trajectory.h5
+ -- write_traj     : False
+
+ Time Parameters
+ ----------------
+ -- dt      : 0.01
+ -- t_init  : 0.0
+ -- t_stop  : 20.0
+
+ Input Parameters
+ ----------------
+ -- D          : 0.04222
+ -- eD         : 0.0125
+ -- g_LL       : [0.0, 0.0, -9.81]
+ -- m          : 0.0459
+ -- rho_scale  : 1.0
+ -- wind       : [0.0, 0.0, 0.0]
+
+ Initial State
+ ----------------
+ -- angle    : 10.0
+ -- pos_LL   : [0.0, 0.0, 0.0]
+ -- vel_mag  : 70.0
+
+ Quantities of Interest (QoI):
+ -----------------------------
+ -- Distance Travelled:   103.706223 m
+ -- Max Height:             5.672940 m
+ -- time @ impact:          2.130000 s
+</pre></div>
+</div>
+<p>If you ever need help with the command line options, just use the ‘–help’ or
+‘-h’ option:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>$ gball --help
+
+ usage: golfball [-h] [--verbose] [--in_filename [IN_FILENAME]] [--t_init T_INIT]
+              [--t_stop T_STOP] [--dt DT] [--pos_LL POS_LL POS_LL POS_LL]
+              [--vel_mag VEL_MAG] [--angle ANGLE] [--m M] [--D D] [--eD ED] [--g_LL G_LL]
+              [--rho_scale RHO_SCALE] [--wind WIND WIND WIND]
+              [--out_filename [OUT_FILENAME]] [--write_traj] [--traj_filename TRAJ_FILENAME]
+
+ optional arguments:
+   -h, --help            show this help message and exit
+   --verbose, -v         print inputs and outputs to STDOUT
+   --in_filename [IN_FILENAME], -i [IN_FILENAME]
+                         filename of YAML w/ inputs (default: projectile_inputs.yml)
+   --t_init T_INIT       initial sim time. default: specified by input file)
+   --t_stop T_STOP       simulation max time. default: specified by input file
+   --dt DT               simulation time step. default: specified by input file
+   --pos_LL POS_LL POS_LL POS_LL
+                         initial position vector in Local Level frame. default: specified by
+                         input file
+   --vel_mag VEL_MAG     initial velocity magnitude. default: specified by input file
+   --angle ANGLE         launch angle above horizontal. default: specified by input file
+   --m M, -m M           golf ball mass. default: specified by input file
+   --D D, -D D           golf ball diameter. default: specified by input file
+   --eD ED               dimple size ratio. default: specified by input file
+   --g_LL G_LL           gravity vector in Local Level frame. default: specified by input file
+   --rho_scale RHO_SCALE
+                         density scale multiplier. default: specified by input file
+   --wind WIND WIND WIND
+                         constant wind vector in Local Level. default: specified by input file
+   --out_filename [OUT_FILENAME], -o [OUT_FILENAME]
+                         name of YAML output file for QoI. default: specified by input file
+   --write_traj          flag to write trajectory file. default: False
+   --traj_filename TRAJ_FILENAME
+                         trajectory output filename. default: specified by input file
+</pre></div>
+</div>
+</section>
+<section id="running-in-python">
+<h2>Running in Python<a class="headerlink" href="#running-in-python" title="Link to this heading">¶</a></h2>
+<p>In your Python environment of choice, after installation as described above you
+can run your first sim very easily via the main function, passing it a list of
+arguments you’d have used at the command line:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">golfball.sim</span><span class="w"> </span><span class="kn">import</span> <span class="n">Sim</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pprint</span>
+<span class="n">pp</span> <span class="o">=</span> <span class="n">pprint</span><span class="o">.</span><span class="n">PrettyPrinter</span><span class="p">(</span><span class="n">indent</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">gb_sim</span> <span class="o">=</span> <span class="n">Sim</span><span class="p">()</span>
+<span class="n">pp</span><span class="o">.</span><span class="n">pprint</span><span class="p">(</span><span class="n">gb_sim</span><span class="o">.</span><span class="n">inputs</span><span class="p">)</span>
+<span class="n">gb_sim</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+<span class="n">pp</span><span class="o">.</span><span class="n">pprint</span><span class="p">(</span><span class="n">gb_sim</span><span class="o">.</span><span class="n">qoi</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Should output</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>{ &#39;config&#39;: { &#39;out_filename&#39;: &#39;projectile_outputs.yml&#39;,
+              &#39;traj_filename&#39;: &#39;projectile_trajectory.h5&#39;,
+              &#39;write_traj&#39;: False},
+  &#39;params&#39;: { &#39;D&#39;: 0.04222,
+              &#39;eD&#39;: 0.0125,
+              &#39;g_LL&#39;: [0.0, 0.0, -9.81],
+              &#39;m&#39;: 0.0459,
+              &#39;rho_scale&#39;: 1.0,
+              &#39;wind&#39;: [0.0, 0.0, 0.0]},
+  &#39;state&#39;: {&#39;angle&#39;: 38.0, &#39;pos_LL&#39;: [0.0, 0.0, 0.0], &#39;vel_mag&#39;: 70.0},
+  &#39;time&#39;: {&#39;dt&#39;: 0.01, &#39;t_init&#39;: 0.0, &#39;t_stop&#39;: 20.0}}
+
+{ &#39;max_height&#39;: 50.08844542014751,
+  &#39;max_range&#39;: 185.2417438617364,
+  &#39;time_of_flight&#39;: 6.28}
+</pre></div>
+</div>
+<p>where the assigned variable output is a dictionary containing the Quantities of
+Interest (QoI) with the following keys:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>{ &#39;max_height&#39;: 50.08844542014751,
+   &#39;max_range&#39;: 185.2417438617364,
+   &#39;time_of_flight&#39;: 6.28}
+</pre></div>
+</div>
+<p>note that if you don’t already have it, this example also writes a default
+inputs file ‘projectile_inputs.yml’ and captures the outputs in the default
+outputs file ‘projectile_outputs.yml’.  The user can specify these files as
+command line arguments passed to main().  If no input file is specified, the
+default parameters will be used to create a new ‘projectile_inputs.yml’ if one
+doesn’t already exist, or use the existing file of that name if it does.</p>
+<p>See <a class="reference internal" href="examples.html#examples"><span class="std std-ref">Examples</span></a> page for more detailed use cases.</p>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">Quickstart</a><ul>
+<li><a class="reference internal" href="#command-line">Command Line</a></li>
+<li><a class="reference internal" href="#running-in-python">Running in Python</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="install.html"
+                          title="previous chapter">Installation</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="examples.html"
+                          title="next chapter">Examples</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/quickstart.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>  
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="examples.html" title="Examples"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="install.html" title="Installation"
+             >previous</a> |</li>
+          <li><img src="_static/py.svg" alt="Python logo" style="vertical-align: middle; margin-top: -1px"></li>
+          <li><a href="https://www.python.org/">Python</a> &#187;</li>
+          <li class="switchers">
+            <div class="language_switcher_placeholder"></div>
+            <div class="version_switcher_placeholder"></div>
+          </li>
+          <li>
+              
+              <a href="index.html">golfball 3.0.0 documentation</a> &#187;
+              
+          </li>
+        <li class="nav-item nav-item-this"><a href="">Quickstart</a></li>
+                <li class="right">
+                    
+
+    <div class="inline-search" role="search">
+        <form class="inline-search" action="search.html" method="get">
+          <input placeholder="Quick search" aria-label="Quick search" type="search" name="q" id="search-box">
+          <input type="submit" value="Go">
+        </form>
+    </div>
+                     |
+                </li>
+            <li class="right">
+<label class="theme-selector-label">
+    Theme
+    <select class="theme-selector" oninput="activateTheme(this.value)">
+        <option value="auto" selected>Auto</option>
+        <option value="light">Light</option>
+        <option value="dark">Dark</option>
+    </select>
+</label> |</li>
+            
+      </ul>
+    </div>  
+    <div class="footer">
+    &copy; 
+    Copyright
+     2020, Erik S. Bailey.
+    <br>
+    This page is licensed under the Python Software Foundation License Version 2.
+    <br>
+    Examples, recipes, and other code in the documentation are additionally licensed under the Zero Clause BSD License.
+    <br>
+    
+    
+    <br>
+
+    The Python Software Foundation is a non-profit corporation.
+<a href="https://www.python.org/psf/donations/">Please donate.</a>
+<br>
+    <br>
+    
+    <br>
+
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
+    </div>
+
+  </body>
+</html>

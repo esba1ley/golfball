@@ -13,7 +13,7 @@ explore variation in performance with altitude relative to mean sea level.
 Documentation
 =============
 
-Full documentation is `on the GitHub Pages site for this repository <https://github.com/pages/esba1ley/golfball/_build/html/index.html>`_.
+Full documentation is `on the GitHub Pages site for this repository <https://esba1ley.github.io/golfball/_build/html/index.html>`_.
 
 .. inclusion-marker-installation-start
 
@@ -230,20 +230,20 @@ doesn't already exist, or use the existing file of that name if it does.
 
 .. inclusion-marker-quickstart-end
 
-See `documentation <https://github.com/pages/esba1ley/golfball_demo_sim/_build/html/index.html>`_ for more
+See `documentation <https://esba1ley.github.io/golfball/_build/html/index.html>`_ for more
 detailed examples and features.
 
 
 Project Links
 =============
 
-- Documentation: https://github.com/pages/esba1ley/golfball_demo_sim/_build/html/index.html
-- Issues: https://github.com/esba1ley/golfball_demo_sim/issues
+- Documentation: https://esba1ley.github.io/golfball/_build/html/index.html
+- Issues: https://github.com/esba1ley/golfball/issues
 
 
 License
 =======
 
-Copyright Caltech/JPL, all rights reserved. See the bundled
-`LICENSE <https://github.com/esba1ley/golfball_demo_sim/blob/master/LICENSE>`_ file
+Copyright `Erik S. Bailey <mailto://esbailey@me.com>`_, all rights reserved. See the bundled
+`LICENSE <https://github.com/esba1ley/golfball/blob/master/LICENSE.rst>`_ file
 for more details.

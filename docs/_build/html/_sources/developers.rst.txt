@@ -16,7 +16,7 @@ This repository is structured as follows:
     ├── CONTRIBUTING.rst  . . . . . How to contribute to the project
     ├── Dockerfile  . . . . . . . . Creates golfball app Docker image (portable)
     ├── Jenkinsfile . . . . . . . . Jenkins pipeline definition to test golfball
-    ├── LICENSE . . . . . . . . . . Caltech license
+    ├── LICENSE . . . . . . . . . . license
     ├── Makefile  . . . . . . . . . Developer shortcuts (with help!)
     ├── README.rst  . . . . . . . . Repository top-level README
     ├── container_test.sh . . . . . script to test golfball with Jenkins
@@ -24,12 +24,6 @@ This repository is structured as follows:
     │   ├── cd_table.h5 . . . . . . HDF5 table used by golfball
     │   ├── dimpledSpheresDragData/ directory with source drag data in it
     │   └── write_cd_h5.py  . . . . script to generate HDF5 table for golfball
-    ├── docker_golfball_env . . . . GOLFBALL ENVIRONMENT DOCKER IMAGE FOR CI/CD
-    │   ├── Dockerfile  . . . . . . Creates golfball_env Docker image
-    │   ├── Makefile  . . . . . . . Developer shortcuts (with help!)
-    │   ├── condarc . . . . . . . . conda package manager configuration file
-    │   ├── entrypoint.sh . . . . . Docker image entrypoint script
-    │   └── golfball_env.yaml . . . Python dependencies and virtual env spec
     ├── docs  . . . . . . . . . . . PACKAGE DOCUMENTATION
     │   ├── Makefile  . . . . . . . Build Targets for documentation
     │   ├── _static/  . . . . . . . directory w/ static content
@@ -81,10 +75,10 @@ in the top directory of this repository:
 
 .. code-block:: text
 
-   $ make
+    $ make
     -------------------- Makefile Target List --------------------------
-     Application for golfball:latest
-     Docker Registry: artifactory.jpl.nasa.gov:16003/gov/nasa/jpl/edlgnc
+    Package: golfball
+    Git branch: main
     --------------------------------------------------------------------
     help                 Display list of intended targets for user (DEFAULT)
     test-all             check style, coverage, and run tests.
@@ -151,8 +145,7 @@ Building Documentation
 ----------------------
 
 To build the documentation for this project, just use the "docs" target of the
-makefile.  The documentation is posted on GitHub Enterprise internal to JPL as
-part of the GitHub Pages feature, and it hosts from the master branch.
+makefile.  The documentation is posted on GitHub Pages, and it hosts from the master branch.
 
 
 Building the Docker App
@@ -166,7 +159,7 @@ image.  The use cases for the two different images are as follows:
    1. The *environment* image is used to build the environment once and speed up
    repeated building of the application image as Python code changes are made.
    It is also the image used by the Jenkins CI/CD workflow to automatically test
-   the golfball code when changes are made in JPL GitHub Enterprise.
+   the golfball code when changes are made in GitHub.
 
    2. The *application* image is the environment image with golfball installed
    in it.  This is the portable "batteries included" application that can be
